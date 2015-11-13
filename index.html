@@ -16,13 +16,13 @@
   
   <body>
     <div class="wrapper">
+      
       <header>
         <h1>INCD-journal</h1>
         <p>A WCAG-compliant design journal</p>
 
         <p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>anosognosia/INCD-Journal</small></a></p>
-
-
+        
         <ul>
           <li><a href="https://github.com/anosognosia/INCD-Journal/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/anosognosia/INCD-Journal/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -34,6 +34,7 @@
         <h2> Edgar's Design Journal - Inclusive Design Lab 1</h2>
         
         <h3> Posts: </h3>
+        {{ site.time | date_to_string }}
         <ul>
           {% for post in site.posts %}
             <li>
