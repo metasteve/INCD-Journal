@@ -1,0 +1,7 @@
+# Testing
+
+## Testing
+
+### 123
+
+Markdown is cool, but where do i'll have to look more at the templating to see where i add ARIA and semantics stuff, a lot of the formatting is above, and then there's the css possibly?
