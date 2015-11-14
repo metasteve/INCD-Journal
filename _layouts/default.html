@@ -45,14 +45,11 @@
         </header>
       </div>
     </div>
-
- 
- 
  
  
     <div id="main" role="main" class="container">
       {{ content }}
-       <h3> Posts: </h3>
+       <h3>Recent Posts:</h3>
         {{ site.time | date_to_string }}
         <ul>
           {% for post in site.posts %}
@@ -61,16 +58,9 @@
             </li>
           {% endfor %}
         </ul>
-        
+  
         <br>
-        
-        <h3>
-			<a id="welcome-to-this-journal" class="anchor" href="#welcome-to-this-journal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to this accessible Design Journal.
-		</h3>
-
-		<p>This is a WCAG compliant, WIA-ARIA enabled Design Journal for the INCD Echo cohort, powered by Jekyll</p>
       </section>
-      
     </div>
     
     
