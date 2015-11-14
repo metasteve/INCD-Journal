@@ -36,6 +36,10 @@ head {
   top: 200px;
 }
 
+main {
+  float: right;
+}
+
 
 a {
   color:#39c;
