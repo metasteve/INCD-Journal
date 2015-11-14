@@ -66,14 +66,12 @@
 
         <script type="text/javascript" src="js/prefsEditorDemo.js"></script>
 
+        <!-- for Overview Panel -->
+      <!--  <script type="text/javascript" src="../../src/components/overviewPanel/js/OverviewPanel.js"></script>
+        <script type="text/javascript" src="../shared/js/overviewWrapper.js"></script> -->
 
         <title>NOAA Education Resources: Climate Change Impacts Collection</title>
     </head>
-
-
-
-
-
 
     <body class="fl-focus">
         <!-- The page-wide UI Enhancer needs to be initialized right away -->
@@ -107,12 +105,6 @@
             </div>
         </div>
         <!-- END markup for Preference Editor -->
-
-
-
-
-
-
 
         <div class="flc-toc-tocContainer toc"> </div>
         <div id="content" class="demo-content">
@@ -150,13 +142,6 @@
                     </div>
 
                     <script type="text/javascript" src="js/changeClass.js"></script>
-
-
-
-
-
-
-
 
                     <div id="mainBlock">
                         <div id="mainNavElements">
@@ -199,6 +184,102 @@
                                     <div style="height:2px;"></div>
                                 </div>
 
+                                <div class="dropdown" onmouseover="demo.changeClass('b')" onmouseout="demo.changeAgain('b')" onclick="demo.changeAgain('b')">
+                                    <a href="#" class="mainnavitems"><b>Climate</b></a><span class="spacer">|</span>
+                                    <div id="b" style="display:none;  z-index:10000; position:relative; background-color:#0057a5;top:8px; ">
+
+                                        <div class="top">
+                                            <div style="height:8px"></div>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Climate Homepage</a>
+                                            </p>
+                                            <div class="border"></div>
+                                            <p class="ltblue">
+                                                <b>Collections</b>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Carbon Cycle</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Changing Seasons</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Climate Change Impacts</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Climate Monitoring</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="height:2px;"></div>
+                                </div>
+
+                                <div class="dropdown" onmouseover="demo.changeClass('c')" onmouseout="demo.changeAgain('c')" onclick="demo.changeAgain('c')">
+                                    <a href="#" class="mainnavitems"><b>Weather and Atmosphere</b></a><span class="spacer">|</span>
+                                    <div id="c" style="display:none;  z-index:10000; position:relative; background-color:#0057a5;top:8px; ">
+
+                                        <div class="top">
+                                            <div style="height:10px"></div>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Weather and Atmosphere Homepage</a>
+                                            </p>
+                                            <div class="border"></div>
+                                            <p class="ltblue">
+                                                <b>Collections</b>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">El Niño</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Hurricanes</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Space Weather</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Weather Observations</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Weather Systems and Patterns</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="height:2px;"></div>
+
+                                </div>
+
+                                <div class="dropdown" onmouseover="demo.changeClass('d')" onmouseout="demo.changeAgain('d')" onclick="demo.changeAgain('d')">
+                                    <a href="#" class="mainnavitems"><b>Marine Life</b></a><span class="spacer">|</span>
+                                    <div id="d" style="display: none; z-index: 10000; position: relative; background-color: rgb(0, 87, 165); top: 8px;">
+
+                                        <div class="top">
+                                            <div style="height:10px"></div>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Marine Life Homepage</a>
+                                            </p>
+                                            <div class="border"></div>
+                                            <p class="ltblue">
+                                                <b>Collections</b>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Aquatic Food Webs</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Coral Ecosystems</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Life In An Estuary</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Marine Mammals</a>
+                                            </p>
+                                            <p class="navigation">
+                                                <a class="navitems" href="#">Sea Turtles</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="height:2px;"></div>
+                                </div>
 
                                 <div class="dropdown" onmouseover="demo.changeClass('e')" onmouseout="demo.changeAgain('e')" onclick="demo.changeAgain('e')">
                                     <a href="#" class="mainnavitems"><b>Freshwater</b></a><span class="spacer">|</span>
@@ -625,6 +706,13 @@
                             Widespread climate-related impacts are occurring now and are expected to increase.
                         </p>
 
+                        <p>
+                            Changes are happening in the United States, and elsewhere, but the
+                            impacts vary from region to region. These changes are affecting sectors
+                            of our society that cross regional boundaries. Already impacted are
+                            things that we depend upon; water, energy, transportation, agriculture,
+                            ecosystems, and human health.
+                        </p>
                         <figure id="article_image" style="padding-top: 5px; width: 402px;">
                             <a href="#"><img src="images/climate_change_collection_img.jpg" alt="climate change graphic" height="242" width="400"></a>
                             <div class="theme_image_caption" style="width: 402px;">
@@ -645,7 +733,20 @@
                             decades. In most regions, floods and water quality problems are likely
                             to be worse because of climate change.
                         </p>
-
+                        <p>
+                            Agriculture is considered adaptable to changes in climate. However,
+                            changes, like increased temperatures, water stress, diseases, and
+                            weather extremes will create new challenges for food producers, upon
+                            which our society depends.
+                        </p>
+                        <p>
+                            Human health is likely to be affected by climate change.&nbsp;A
+                            changing environment will likely cause more heat stress, an increase in
+                            waterborne diseases, poor air quality, extreme weather events, and
+                            diseases transmitted by insects and rodents. Higher sea levels and storm
+                            surges will cause U.S. coastal areas to be at a greater risk of erosion
+                            and flooding.
+                        </p>
                         <p class="first">
                             Future climate change and its impacts depend on choices made today.
                         </p>
