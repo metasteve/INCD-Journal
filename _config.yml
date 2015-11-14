@@ -1,16 +1,15 @@
-permalink: /:categories/:title.html
-url: "http://anosognosia.github.io/INCD-Journal/"
-baseurl: "http://anosognosia.github.io/INCD-Journal/"
-full_name: "Edgar Wong Baxter Jr."
-first_name: "Edgar"
-last_name: "Wong Baxter Jr."
-blog_title: "INCD-Journal"
-author_img_name_path: "/images/users/user.jpg"
-disqus_shortname: ""
-copyright_year: "2015"
-google_analytics_code: ""
-aboutme: "An old book, boiled in oil"
-twitter: "edgarwongbaxterjr"
-github: "anosognosia"
-facebook: "jamaicasdarling"
-linkined_url: ""
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: Design Journal YML
+
+# Short bio or description (displayed in the header)
+description: Web Developer from Somewhere
+
+#
+# Flags below are optional
+#
+
+permalink: /:title/
