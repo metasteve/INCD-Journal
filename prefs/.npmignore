@@ -1,0 +1,14 @@
+.settings
+.gitignore
+.npmignore
+.project
+build/
+demos/
+examples/
+products/
+tests/component-tests/
+tests/framework-tests/
+tests/manual-tests/
+tests/node-tests/
+tests/test-core/testTests/
+tests/all-tests.html
