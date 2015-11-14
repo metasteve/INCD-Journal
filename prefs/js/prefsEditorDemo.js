@@ -49,12 +49,12 @@ var demo = demo || {};
         auxiliarySchema: {
             terms: {
                 // adjust paths
-                templatePrefix: "../../src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
-                messagePrefix: "../../src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
+                templatePrefix: "src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
+                messagePrefix: "src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
             },
             tableOfContents: {
                 enactor: {
-                    tocTemplate: "../../src/components/tableOfContents/html/TableOfContents.html"
+                    tocTemplate: "src/components/tableOfContents/html/TableOfContents.html"
                 }
             },
 
@@ -84,12 +84,12 @@ var demo = demo || {};
         auxiliarySchema: {
             terms: {
                 // adjust paths
-                templatePrefix: "../../src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
-                messagePrefix: "../../src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
+                templatePrefix: "src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
+                messagePrefix: "src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
             },
             tableOfContents: {
                 enactor: {
-                    tocTemplate: "../../src/components/tableOfContents/html/TableOfContents.html",
+                    tocTemplate: "src/components/tableOfContents/html/TableOfContents.html",
                     ignoreForToC: {
                         "overviewPanel": ".flc-overviewPanel"
                     }
