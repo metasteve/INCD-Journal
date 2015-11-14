@@ -1,5 +1,6 @@
 permalink: /:categories/:title.html
 url: "http://anosognosia.github.io/INCD-Journal/"
+baseurl: "http://anosognosia.github.io/INCD-Journal/"
 full_name: "Edgar Wong Baxter Jr."
 first_name: "Edgar"
 last_name: "Wong Baxter Jr."
