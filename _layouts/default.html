@@ -3,15 +3,16 @@
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/styles.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
 
   <body>
@@ -19,6 +20,8 @@
       <div class="container">
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          
+          
 
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
@@ -28,14 +31,48 @@
           <nav>
             <a href="{{ site.baseurl }}/">Journal</a>
           </nav>
+          
         </header>
       </div>
     </div>
 
     <div id="main" role="main" class="container">
       {{ content }}
-    </div>
+      
+       <h3> Posts: </h3>
+        {{ site.time | date_to_string }}
+        <ul>
+          {% for post in site.posts %}
+            <li>
+              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        
+        <br>
+        
+        <h3>
+			<a id="welcome-to-this-journal" class="anchor" href="#welcome-to-this-journal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to this accessible Design Journal.
+		</h3>
 
+		<p>This is a WCAG compliant, WIA-ARIA enabled Design Journal for the INCD Echo cohort, powered by Jekyll</p>
+      </section>
+      
+    </div>
+    
+    
+    <footer>
+      <p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
+      <p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>anosognosia/INCD-Journal</small></a></p>
+        
+      <ul>
+        <li><a href="https://github.com/anosognosia/INCD-Journal/zipball/master">Download <strong>ZIP File</strong></a></li>
+        <li><a href="https://github.com/anosognosia/INCD-Journal/tarball/master">Download <strong>TAR Ball</strong></a></li>
+        <li><a href="https://github.com/anosognosia/INCD-Journal">View On <strong>GitHub</strong></a></li>
+      </ul>
+    </footer>
+
+    <script src="javascripts/scale.fix.js"></script>
 
   </body>
 </html>
