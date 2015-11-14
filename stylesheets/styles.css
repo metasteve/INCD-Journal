@@ -10,6 +10,14 @@ body {
   width: 60%;
 }
 
+footer {
+  width:270px;
+  float:left;
+  position:fixed;
+  top:400px;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
@@ -198,13 +206,7 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  top:300px;
-  -webkit-font-smoothing:subpixel-antialiased;
-}
+
 
 @media print, screen and (max-width: 960px) {
 
