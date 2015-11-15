@@ -1,3 +1,6 @@
+---
+---
+
 /*
 Copyright 2014-2015 OCAD University
 
@@ -49,17 +52,17 @@ var demo = demo || {};
         auxiliarySchema: {
             terms: {
                 // adjust paths
-                templatePrefix: "src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
-                messagePrefix: "src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
+                templatePrefix: "{{ site.url }}/src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
+                messagePrefix: "{{ site.url }}/src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
             },
             tableOfContents: {
                 enactor: {
-                    tocTemplate: "src/components/tableOfContents/html/TableOfContents.html"
+                    tocTemplate: "{{ site.url }}/src/components/tableOfContents/html/TableOfContents.html"
                 }
             },
 
             // sepcify augmented container template for panels
-            template: "html/SeparatedPanelPrefsEditor.html",
+            template: "{{ site.url }}/html/SeparatedPanelPrefsEditor.html",
 
             // add panels and enactors for extra settings
             simplify: {
@@ -71,8 +74,8 @@ var demo = demo || {};
                 panel: {
                     type: "demo.prefsEditor.simplifyPanel",
                     container: ".demo-prefsEditor-simplify",
-                    template: "html/SimplifyPanelTemplate.html",
-                    message: "messages/simplify.json"
+                    template: "{{ site.url }}/html/SimplifyPanelTemplate.html",
+                    message: "{{ site.url }}/messages/simplify.json"
                 }
             }
         }
@@ -84,12 +87,12 @@ var demo = demo || {};
         auxiliarySchema: {
             terms: {
                 // adjust paths
-                templatePrefix: "src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
-                messagePrefix: "src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
+                templatePrefix: "{{ site.url }}/src/framework/preferences/html",  // Must match the keyword used below to identify the common path to settings panel templates.
+                messagePrefix: "{{ site.url }}/src/framework/preferences/messages"  // Must match the keyword used below to identify the common path to message files.
             },
             tableOfContents: {
                 enactor: {
-                    tocTemplate: "src/components/tableOfContents/html/TableOfContents.html",
+                    tocTemplate: "{{ site.url }}/src/components/tableOfContents/html/TableOfContents.html",
                     ignoreForToC: {
                         "overviewPanel": ".flc-overviewPanel"
                     }
@@ -97,7 +100,7 @@ var demo = demo || {};
             },
 
             // sepcify augmented container template for panels
-            template: "html/SeparatedPanelPrefsEditorWithTTS.html"
+            template: "{{ site.url }}/html/SeparatedPanelPrefsEditorWithTTS.html"
         }
     });
 
