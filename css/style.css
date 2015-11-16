@@ -10,9 +10,9 @@ header{
 	color: #333;
 	z-index: 1001;
 }
+
 #content{
 	position: relative;
-	margin-top: 75px;
 	width: 100%;
 }
 
@@ -20,6 +20,7 @@ header{
 	float: left;
 	position: relative;
 	width: 80%;
+	margin-top: 75px;
 	left: 10%;
 }
 
