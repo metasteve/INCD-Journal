@@ -137,7 +137,20 @@
 	    	<div id="main" role="main" class="container">
 	      		<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
 	      		{{ content }}
-	      		<section>
+	      		<section>			   
+			          {% for post in site.posts %}
+			            <div class="item-block">
+			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+			            </div>
+			          {% endfor %}
+	             </section>
+	    	</div>
+	    </div>
+
+
+
+
+	    <section>
 		       		<h3>Journal Entries:</h3>
 			        <ul>
 			          {% for post in site.posts %}
@@ -147,19 +160,20 @@
 			          {% endfor %}
 			        </ul>
 	             </section>
-	    	</div>
-	    </div>
+
 
 	    <footer> <!-- PAGE FOOTER -->
 	    	<div id="footer" class="site-footer">
 				<p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>anosognosia/INCD-Journal</small></a></p>
-
+				
+				<p>
 				<ul>
 				<li><a href="https://github.com/anosognosia/INCD-Journal/zipball/master">Download <strong>ZIP File</strong></a></li>
 				<li><a href="https://github.com/anosognosia/INCD-Journal/tarball/master">Download <strong>TAR Ball</strong></a></li>
 				<li><a href="https://github.com/anosognosia/INCD-Journal">View On <strong>GitHub</strong></a></li>
 				</ul>
-
+				</p>
+				
 				<p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
 			</div>
 	    </footer>
