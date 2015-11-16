@@ -11,9 +11,14 @@ header{
 	z-index: 1001;
 }
 #content{
-	float: left;
 	position: relative;
 	margin-top: 75px;
+	width: 100%;
+}
+
+#main{
+	float: left;
+	position: relative;
 	width: 80%;
 	left: 10%;
 }
