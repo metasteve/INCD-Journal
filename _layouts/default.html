@@ -150,16 +150,7 @@
 
 
 
-	    <section>
-		       		<h3>Journal Entries:</h3>
-			        <ul>
-			          {% for post in site.posts %}
-			            <li>
-			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
-			            </li>
-			          {% endfor %}
-			        </ul>
-	             </section>
+
 
 
 	    <footer> <!-- PAGE FOOTER -->
@@ -176,6 +167,16 @@
 				
 				<p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
 			</div>
+	    		<section>
+		       		<h3>Journal Entries:</h3>
+			        <ul>
+			          {% for post in site.posts %}
+			            <li>
+			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+			            </li>
+			          {% endfor %}
+			        </ul>
+             	</section>		
 	    </footer>
 	    <script src="{{site.url}}/js/scale.fix.js"></script>
 
