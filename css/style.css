@@ -4,6 +4,7 @@ body {
 
 header{
 	position: fixed;
+	height: 75px;
 	width: 100%;
 	background-color: #66ffcc;
 	color: #333;
@@ -12,6 +13,7 @@ header{
 #content{
 	float: left;
 	position: relative;
+	margin-top: 75px;
 	width: 80%;
 	left: 10%;
 }
@@ -44,7 +46,7 @@ footer{
 }
 
 .site-footer {
-	width: 80%;
+	width: 50%;
 	left: 10%;
 }
 
