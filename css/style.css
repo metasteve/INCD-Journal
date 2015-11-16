@@ -18,6 +18,9 @@ header{
 	left: 10%;
 }
 
+#baked-content {
+	margin-left: 50px;
+}
 #footer-posts {
 	float: right;
 }
