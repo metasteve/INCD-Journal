@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
+    <link rel="stylesheet" href="{{site.url}}/css/style.css">
 <!--
     <link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
     <link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">-->
@@ -16,8 +16,8 @@
     <![endif]-->
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="shortcut icon" href="http://www.education.noaa.gov/education_web/images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="http://www.education.noaa.gov/favicon.ico">
+    <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/lib/normalize/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/framework/core/css/fluid.css" />
@@ -80,11 +80,14 @@
     <script type="text/javascript" src="{{ site.url }}/src/components/textToSpeech/js/TextToSpeech.js"></script>
 
     <script type="text/javascript" src="{{ site.url }}/js/prefsEditorDemo.js"></script>
+    <script type="text/javascript" src="http://leafo.net/sticky-kit/src/jquery.sticky-kit.js"></script>
   </head>
 
-  <body class="fl-focus">
-      <!-- The page-wide UI Enhancer needs to be initialized right away -->
-      <script type="text/javascript">
+
+	<body class="fl-focus"><!-- HTML BODY -->
+
+		<!-- The page-wide UI Enhancer needs to be initialized right away -->
+      	<script type="text/javascript">
           $(document).ready(function () {
               var prefsEditor = fluid.prefs.create(".flc-prefsEditor-separatedPanel", {
                   build: {
@@ -97,13 +100,13 @@
                   }
               });
           });
-      </script>
+      	</script>
 
-      <!-- <div class="flc-overviewPanel fl-overviewPanel-container"></div> -->
-      <!-- BEGIN markup for Preference Editor -->
-      <div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
+      	<!-- BEGIN markup for Preference Editor -->
+      	<div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
           <!-- This is the div that will contain the Preference Editor component -->
-          <div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+          <div class="flc-slidingPanel-panel flc-prefsEditor-iframe">
+          </div>
 
           <!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
           <div class="fl-panelBar">
@@ -112,66 +115,55 @@
                   <button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
               </span>
           </div>
-      </div>
-      <!-- END markup for Preference Editor -->
+    	</div>
+      	<!-- END markup for Preference Editor -->
 
 
+ 
+	    <header class="masthead clearfix"> <!-- PAGE HEADER -->
+	    	<div class="site-info">
+	        	<h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+	        	<p class="site-description">{{ site.description }}</p>
+	      	</div>
 
-      <div id="content" class="demo-content">
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+	      	<nav> <!-- PAGE NAV(IGATION) -->
+	      		<div id="nav" class="site-nav">
+	        		<strong><a href="{{ site.baseurl }}/">Design Journal</a></strong>
+	        	</div>
+	      	</nav>
+	    </header>
+      
+		<div id="content" class="site-content"> <!-- PAGE CONTENT -->
+	    	<div id="main" role="main" class="container">
+	      		<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
+	      		{{ content }}
+	      		<section>
+		       		<h3>Journal Entries:</h3>
+			        <ul>
+			          {% for post in site.posts %}
+			            <li>
+			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+			            </li>
+			          {% endfor %}
+			        </ul>
+	             </section>
+	    	</div>
+	    </div>
 
+	    <footer> <!-- PAGE FOOTER -->
+	    	<div id="footer" class="site-footer">
+				<p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>anosognosia/INCD-Journal</small></a></p>
 
+				<ul>
+				<li><a href="https://github.com/anosognosia/INCD-Journal/zipball/master">Download <strong>ZIP File</strong></a></li>
+				<li><a href="https://github.com/anosognosia/INCD-Journal/tarball/master">Download <strong>TAR Ball</strong></a></li>
+				<li><a href="https://github.com/anosognosia/INCD-Journal">View On <strong>GitHub</strong></a></li>
+				</ul>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+				<p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
+			</div>
+	    </footer>
+	    <script src="{{site.url}}/js/scale.fix.js"></script>
 
-          <nav>
-            <strong><a href="{{ site.baseurl }}/">Design Journal</a></strong>
-          </nav>
-
-        </header>
-      </div>
-    </div>
-  </div>
-
-    <div id="main" role="main" class="container">
-      <div class="flc-toc-tocContainer toc">
-      </div>
-      {{ content }}
-       <h3>Journal Entries:</h3>
-        <ul>
-          {% for post in site.posts %}
-            <li>
-              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-
-        <br>
-      </section>
-    </div>
-
-
-    <footer>
-
-      <p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>anosognosia/INCD-Journal</small></a></p>
-
-      <ul>
-        <li><a href="https://github.com/anosognosia/INCD-Journal/zipball/master">Download <strong>ZIP File</strong></a></li>
-        <li><a href="https://github.com/anosognosia/INCD-Journal/tarball/master">Download <strong>TAR Ball</strong></a></li>
-        <li><a href="https://github.com/anosognosia/INCD-Journal">View On <strong>GitHub</strong></a></li>
-      </ul>
-
-
-      <p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
-    </footer>
-
-    <script src="{{site.url}}/javascripts/scale.fix.js"></script>
-
-  </body>
+  	</body>
 </html>
