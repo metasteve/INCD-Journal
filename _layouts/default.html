@@ -144,7 +144,7 @@
 	      		</div>
 	      		<section>			   
 			          {% for post in site.posts %}
-			            <div class="item-block" style="background-color:{% if post.colour %}{{ post.colour }}{% else %}#00ff00{% endif %}">
+			            <div class="item-block" style="background-color:{{ post.colour }}">
 			            	<a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
 			            </div>
 			          {% endfor %}
