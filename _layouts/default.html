@@ -146,6 +146,7 @@
 			          {% for post in site.posts %}
 			            <div class="item-block" {% if post.colour %} background-color={{ post.colour }} {% else %} background-color='#00ff00' {% endif %} >
 			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
+			              colour: {{ post.colour }} color: {{ post.color }}
 			            </div>
 			          {% endfor %}
 	             </section>
