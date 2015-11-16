@@ -2,10 +2,10 @@ body {
 	font-family: Century Gothic, sans-serif;
 }
 
-#header{
+header{
 	position: fixed;
 	top: 0;
-	background-color: #eee;
+	background-color: #66ffcc;
 	color: #333;
 }
 #content{
@@ -15,13 +15,21 @@ body {
 	left: 10%;
 }
 
+#footer-posts {
+	float: right;
+}
+
+#view {
+	float: left;
+}
+
 .item-block{
 	font-size: 20px;
 	float: left;
 	padding: 50px;
     margin: 1.8%;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 	background-color: #666;
 }
 
