@@ -143,7 +143,7 @@
 	      		</div>
 	      		<section>			   
 			          {% for post in site.posts %}
-			            <div class="item-block">
+			            <div class="item-block" {% if page.colour %} background-color="{{ page.colour }}" {% endif %}>
 			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
 			            </div>
 			          {% endfor %}
@@ -171,6 +171,7 @@
 				<br>
 				<p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
 			</div>
+			<!--
 	    		<section id="footer-posts">
 		       		<h3>Journal Entries:</h3>
 			        <ul>
@@ -180,7 +181,8 @@
 			            </li>
 			          {% endfor %}
 			        </ul>
-             	</section>		
+             	</section>	
+             -->	
 	    </footer>
 	    <!--
 	    <script src="{{site.url}}/js/scale.fix.js"></script>
