@@ -1,4 +1,5 @@
 ---
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -143,7 +144,7 @@
 	      		</div>
 	      		<section>			   
 			          {% for post in site.posts %}
-			            <div class="item-block" {% if page.colour %} background-color="{{ page.colour }}" {% else %} background-color="#00ff00" {% endif %}>
+			            <div class="item-block" {% if page.colour %} background-color={{ page.colour }} {% else %} background-color=#00ff00 {% endif %} >
 			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
 			            </div>
 			          {% endfor %}
