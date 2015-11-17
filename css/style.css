@@ -6,12 +6,24 @@ header{
 	position: fixed;
 	height: 155px;
 	width: 100%;
-	/*background-color: #66ffcc;*/
+	background-color: #fff;
 	color: #333;
 	z-index: 1001;
 }
 
+.site-name  {
+	width:auto;
+	padding-left: 25px;
+}
 
+.site-description {
+	width:auto;
+	padding-left: 25px;
+}
+
+.site-nav {
+	float:right;
+}
 
 #content{
 	position: relative;
