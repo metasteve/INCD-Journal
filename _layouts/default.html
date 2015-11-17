@@ -143,9 +143,9 @@
 	      			{{ content }}
 	      		</div>
 	      		<section>	
-	      		{% assign pages = site.pages %}
+	      		{% assign posts = site.posts %}
  
-			          {% for p in pages %}
+			          {% for p in posts %}
 			            <div class="item-block" style="background-color:{{ p.colour }}">
 			            	<a href="{{site.url}}{{ p.url }}">{{ p.title }}</a>
 			            </div>
