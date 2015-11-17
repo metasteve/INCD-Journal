@@ -4,18 +4,14 @@ body {
 
 header{
 	position: fixed;
-	height: 75px;
+	height: 155px;
 	width: 100%;
 	/*background-color: #66ffcc;*/
 	color: #333;
 	z-index: 1001;
 }
 
-header div{
-	float: left;
-	display:inline-block;
-	width: auto;
-}
+
 
 #content{
 	position: relative;
@@ -26,7 +22,7 @@ header div{
 	float: left;
 	position: relative;
 	width: 80%;
-	margin-top: 75px;
+	margin-top: 155px;
 	left: 10%;
 }
 
