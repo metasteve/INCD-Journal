@@ -4,6 +4,12 @@ title: Todo
 published: true
 ---
 ## Todo:
+- documentation
+-   favicon
+-   config.yml
+-   index.html
+-   layouts
+-   styling
 - accessible colour palette
 - proper styling
 - clean up folders
