@@ -12,10 +12,13 @@ header{
 	z-index: 1001;
 }
 
+#info-group {
+	width: 30%;
+	padding-left: 10%;
+}
+
 .site-name  {
 	float: left;
-	width:30%;
-	padding-left: 10%;
 }
 
 .site-nav  {
@@ -26,7 +29,6 @@ header{
 
 .site-description {
 	float: left;
-	width:15%;
 	padding-left: 1%;
 }
 
