@@ -3,8 +3,7 @@ layout: default
 title: Todo
 published: true
 ---
-
-## Next Actions:
+## Todo:
 - accessible colour palette
 - proper styling
 - clean up folders
