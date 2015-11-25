@@ -19,67 +19,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico">
     <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
-
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/lib/normalize/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/framework/core/css/fluid.css" />
-
-    <!-- CSS required for the Prefs Editor -->
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/framework/preferences/css/Enactors.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/framework/preferences/css/PrefsEditor.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/src/components/overviewPanel/css/OverviewPanel.css" />
-
-    <!-- <link href="css/main.css" rel="stylesheet" type="text/css" media="screen"> -->
-
-    <script type="text/javascript" src="{{ site.url }}/src/lib/jquery/core/js/jquery.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/lib/jquery/ui/js/jquery.ui.core.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/lib/jquery/ui/js/jquery.ui.widget.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/lib/jquery/ui/js/jquery.ui.mouse.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/lib/jquery/ui/js/jquery.ui.slider.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/lib/buzz/js/buzz.js"></script>
-    <!--[if IE 8]>
-        <script type="text/javascript" src="lib/html5shiv/js/html5shiv.js"></script>
-    <![endif]-->
-
-
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/FluidDocument.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/jquery.keyboard-a11y.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/Fluid.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/FluidRequests.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/FluidDOMUtilities.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/FluidIoC.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/DataBinding.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/ModelTransformation.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/ModelTransformationTransforms.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/core/js/FluidView.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/lib/fastXmlPull/js/fastXmlPull.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/renderer/js/fluidParser.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/renderer/js/fluidRenderer.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/renderer/js/RendererUtilities.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/enhancement/js/ContextAwareness.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/enhancement/js/ProgressiveEnhancement.js"></script>
-
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/URLUtilities.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/Store.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/components/textfieldSlider/js/TextfieldSlider.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/UIEnhancer.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/PrefsEditor.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/Panels.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/SelfVoicingPanel.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/Enactors.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/SelfVoicingEnactor.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/SeparatedPanelPrefsEditor.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/components/slidingPanel/js/SlidingPanel.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/components/tableOfContents/js/TableOfContents.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/PrimaryBuilder.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/AuxBuilder.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/StarterSchemas.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/SelfVoicingSchemas.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/StarterSchemas.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/framework/preferences/js/Builder.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/components/uiOptions/js/UIOptions.js"></script>
-    <script type="text/javascript" src="{{ site.url }}/src/components/textToSpeech/js/TextToSpeech.js"></script>
-
+    
+    {% include prefs-includes.html %}
+  
     <script type="text/javascript" src="{{ site.url }}/js/prefsEditorDemo.js"></script>
     <script type="text/javascript" src="http://leafo.net/sticky-kit/src/jquery.sticky-kit.js"></script>
   </head>
@@ -119,87 +61,26 @@
           });
       	</script>
 
-
- 
-	    <header class="masthead clearfix" role="banner"> <!-- PAGE HEADER -->
-
-
-
-
-
-	    	<div id="info" class="site-info">
-	    		<div id="info-group">
-	        		<h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-	        		<p class="site-description">{{ site.description }}</p>
-	        	</div>
-	        	<nav> <!-- PAGE NAV(IGATION) -->
-	      		<div id="nav" class="site-nav" role="navigation">
-	        		<strong><a href="{{ site.baseurl }}/">Home</a></strong>
-	        		<strong><a href="{{ site.baseurl }}/todo.html">Todo</a></strong>
-	        	</div>
-	      	</nav>
-	      	</div>
-
-	      	
-	    </header>
+    	{% include header.html %} <!-- HEADER / BANNER INCLUDE -->
       
-		<div id="content" class="site-content"> <!-- PAGE CONTENT -->
+	<div id="content" class="site-content"> <!-- PAGE CONTENT -->
 	    	<div id="main" role="main" class="container" role="main">
-	      		<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
-	      		<div id="baked-content">
-	      			{{ content }}
-	      		</div>
-	      		<section role="complementary">	
-	      		{% assign posts = site.posts %}
- 
-			          {% for p in posts %}
-			            <div class="item-block" style="background-color:#eee">
-			            	<h3><a href="{{site.url}}{{ p.url }}">{{ p.title }}</a></h3>
-			            </div>
-			          {% endfor %}
-	             </section>
+		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
+		      	<div id="baked-content">
+		      		{{ content }}
+		      	</div>
+		      	<section role="complementary">	
+		      		{% assign posts = site.posts %}
+				{% for p in posts %}
+				<div class="item-block" style="background-color:#eee">
+				    <h3><a href="{{site.url}}{{ p.url }}">{{ p.title }}</a></h3>
+				</div>
+				{% endfor %}
+			</section>
 	    	</div>
-	    </div>
+    	</div>
 
+    	{% include prefs-includes.html %} <!-- FOOTER INCLUDE -->
 
-
-
-
-
-
-	    <footer role="contentinfo"> <!-- PAGE FOOTER -->
-	    	<div id="footer" class="site-footer">
-	    			<h4>
-				<p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>(anosognosia/INCD-Journal)</small></a></p>
-				
-				<p>
-					
-				<ul>
-				<li><a href="https://github.com/anosognosia/INCD-Journal/zipball/master">Download <strong>ZIP File</strong></a></li>
-				<li><a href="https://github.com/anosognosia/INCD-Journal/tarball/master">Download <strong>TAR Ball</strong></a></li>
-				<li><a href="https://github.com/anosognosia/INCD-Journal">View On <strong>GitHub</strong></a></li>
-				</ul>
-					
-				</p>
-				</h4>
-				<br>
-				<p>This project is maintained by <a href="https://github.com/anosognosia">edgar wong baxter jr.</a></p>
-			</div>
-			<!--
-	    		<section id="footer-posts">
-		       		<h3>Journal Entries:</h3>
-			        <ul>
-			          {% for post in site.posts %}
-			            <li>
-			              <a href="{{site.url}}{{ post.url }}">{{ post.title }}</a>
-			            </li>
-			          {% endfor %}
-			        </ul>
-             	</section>	
-             -->	
-	    </footer>
-	    <!--
-	    <script src="{{site.url}}/js/scale.fix.js"></script>
-		-->
   	</body>
 </html>
