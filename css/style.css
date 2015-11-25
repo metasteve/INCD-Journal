@@ -19,10 +19,11 @@ header{
 
 .site-name  {
 	float: left;
+	width: 30%;
 }
 
 .site-nav  {
-	float: left;
+	float: right;
 	width:30%;
 	padding-left: 1%;
 }
