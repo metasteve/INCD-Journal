@@ -13,22 +13,22 @@ header{
 
 .site-name  {
 	width:30%;
-	padding-left: 15%;
+	padding-left: 10%;
 }
 
 .site-nav  {
 	width:30%;
-	padding-left: 15%;
+	padding-left: 10%;
 }
 
 .site-description {
 	width:30%;
-	padding-left: 15%;
+	padding-left: 10%;
 }
 
 .site-description {
 	width:30%;
-	padding-left: 15%;
+	padding-left: 10%;
 }
 
 #content{
@@ -74,7 +74,7 @@ footer{
 
 .site-footer {
 	width: 50%;
-	padding-left: 15%;
+	padding-left: 25%;
 }
 
 .site-footer ul li {
