@@ -3,6 +3,7 @@ body {
 }
 
 header{
+	float: left;
 	position: relative;
 	height: 155px;
 	width: 100%;
