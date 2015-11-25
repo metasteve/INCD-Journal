@@ -15,25 +15,19 @@ header{
 
 .site-name  {
 	float: left;
-	width:30%;
+	width:15%;
 	padding-left: 10%;
 }
 
 .site-nav  {
 	float: left;
-	width:30%;
+	width:15%;
 	padding-left: 10%;
 }
 
 .site-description {
 	float: left;
-	width:30%;
-	padding-left: 10%;
-}
-
-.site-description {
-	float: left;
-	width:30%;
+	width:15%;
 	padding-left: 10%;
 }
 
