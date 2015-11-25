@@ -33,6 +33,7 @@ header{
 }
 
 #content{
+	float: left;
 	position: relative;
 	width: 100%;
 }
