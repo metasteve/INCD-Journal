@@ -85,6 +85,7 @@
   </head>
 
 
+	
 	<body class="fl-focus"><!-- HTML BODY -->
 	
 	      	<!-- BEGIN markup for Preference Editor -->
@@ -120,7 +121,7 @@
 
 
  
-	    <header class="masthead clearfix"> <!-- PAGE HEADER -->
+	    <header class="masthead clearfix" role="banner"> <!-- PAGE HEADER -->
 
 
 
@@ -132,8 +133,9 @@
 	        		<p class="site-description">{{ site.description }}</p>
 	        	</div>
 	        	<nav> <!-- PAGE NAV(IGATION) -->
-	      		<div id="nav" class="site-nav">
-	        		<strong><a href="{{ site.baseurl }}/">Design Journal</a></strong>
+	      		<div id="nav" class="site-nav" role="navigation">
+	        		<strong><a href="{{ site.baseurl }}/">Design Journal Home</a></strong>
+	        		<strong><a href="{{ site.baseurl }}/todo.html">Todo</a></strong>
 	        	</div>
 	      	</nav>
 	      	</div>
@@ -142,12 +144,12 @@
 	    </header>
       
 		<div id="content" class="site-content"> <!-- PAGE CONTENT -->
-	    	<div id="main" role="main" class="container">
+	    	<div id="main" role="main" class="container" role="main">
 	      		<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
 	      		<div id="baked-content">
 	      			{{ content }}
 	      		</div>
-	      		<section>	
+	      		<section role="complementary">	
 	      		{% assign posts = site.posts %}
  
 			          {% for p in posts %}
@@ -165,7 +167,7 @@
 
 
 
-	    <footer> <!-- PAGE FOOTER -->
+	    <footer role="contentinfo"> <!-- PAGE FOOTER -->
 	    	<div id="footer" class="site-footer">
 				<p class="view"><a href="https://github.com/anosognosia/INCD-Journal">View the Project on GitHub <small>(anosognosia/INCD-Journal)</small></a></p>
 				
