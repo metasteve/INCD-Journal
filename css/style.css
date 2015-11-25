@@ -26,6 +26,10 @@ header{
 	padding-left: 1%;
 }
 
+.site-nav a {
+	padding-left: 2%;
+}
+	
 .site-description {
 	float: left;
 	padding-left: 2%;
