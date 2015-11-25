@@ -15,20 +15,20 @@ header{
 
 .site-name  {
 	float: left;
-	width:15%;
+	width:25%;
 	padding-left: 10%;
 }
 
 .site-nav  {
 	float: left;
-	width:15%;
-	padding-left: 10%;
+	width:30%;
+	padding-left: 5%;
 }
 
 .site-description {
 	float: left;
 	width:15%;
-	padding-left: 10%;
+	padding-left: 2%;
 }
 
 #content{
