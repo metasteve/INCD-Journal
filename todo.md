@@ -4,7 +4,7 @@ title: Todo
 published: true
 ---
 ## Todo:
-- *documentation*
+- **documentation** this is the most important next step, so that others can start using the template
   - favicon
   - config.yml
   - index.html
