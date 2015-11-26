@@ -4,6 +4,7 @@ title: Todo
 published: true
 ---
 ## Todo:
+- **change narration language to english**
 - **documentation** this is the most important next step, so that others can start using the template
   - favicon
   - config.yml
