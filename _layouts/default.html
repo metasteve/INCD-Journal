@@ -3,14 +3,15 @@
 ---
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+	<head>
+		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="stylesheet" href="{{site.url}}/css/style.css">
-<!--
-    <link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
-    <link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">-->
+    	<!--
+    		<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
+    		<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
+    	-->
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -67,6 +68,7 @@
 	    	<div id="main" role="main" class="container" role="main">
 		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
 		      	<div id="baked-content">
+		      		<h2>Journal Entries</h2>
 		      		{{ content }}
 		      	</div>
 		      	<section role="complementary">	
