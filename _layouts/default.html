@@ -68,10 +68,10 @@
 	    	<div id="main" role="main" class="container" role="main">
 		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
 		      	<div id="baked-content">
-		      		<h2>Journal Entries</h2>
 		      		{{ content }}
 		      	</div>
-		      	<section role="complementary">	
+		      	<section role="complementary">
+      		      		<h2>Journal Entries</h2>
 		      		{% assign posts = site.posts %}
 				{% for p in posts %}
 				<div class="item-block" style="background-color:#eee">
