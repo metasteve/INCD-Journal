@@ -15,4 +15,9 @@ This is my simple attempt at creating an easy to use, WCAG Compliant Design Jour
 ##### Platform:
 - [Github](https://github.com/ "GitHub Homepage") + [GitHub Pages](https://pages.github.com/ "GitHub Pages Homepage") ([Jekyl](http://jekyllrb.com/docs/sites/ "Jekyl Homepage"))
   - [Markdown](https://daringfireball.net/projects/markdown/syntax/ "Markdown Syntax Reference")
-- [Prose.io](http://prose.io/ "Prose.io Homepage")
+  - Versioning / Backup
+  - Hosting
+
+##### Authoring
+- [Prose.io](http://prose.io/ "Prose.io Homepage") (web app)
+- [Octopage](https://itunes.apple.com/us/app/octopage-blogging-jekyll-markdown/id649843345 "OctoPage on Appstore") (iOS)
