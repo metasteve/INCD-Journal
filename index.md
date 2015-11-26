@@ -3,7 +3,7 @@ layout: default
 title: INCD Design Journal
 published: true
 ---
-# Welcome my Accessible Design Journal
+# Edgar Wong Baxter's Accessible Design Journal
 This is my simple attempt at creating an easy to use, WCAG Compliant Design Journal platform for the INCD Echo cohort. I'll be focusing on commenting and documentation to make sure the journal easy to use and work with. The hopes are that users learn more about accessible web standards, working with Github itself (social coding), and deploying performant, scalable websites.
 
 #### The journal currently integrates: 
