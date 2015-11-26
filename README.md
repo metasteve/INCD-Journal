@@ -16,3 +16,7 @@ This is my simple attempt at creating an easy to use, WCAG Compliant Design Jour
 ##### Authoring
 - [Prose.io](http://prose.io/ "Prose.io Homepage") (web app)
 - [Octopage](https://itunes.apple.com/us/app/octopage-blogging-jekyll-markdown/id649843345 "OctoPage on Appstore") (iOS)
+
+<br>
+##### Suggestions / Feedback
+if you have any suggestions or feedback, please don't hesitate to contact me at: edgar [at] metatecture.ca
