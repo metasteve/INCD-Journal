@@ -6,64 +6,64 @@
 	<head>
 		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link rel="stylesheet" href="{{site.url}}/css/style.css">
-    	<!--
-    		<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
-    		<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
-    	-->
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+		<link rel="stylesheet" href="{{site.url}}/css/style.css">
+		    <!--
+		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
+		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
+		    -->
+		<meta name="viewport" content="width=device-width">
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
+		
+		{% include prefs-includes.html %}
+		
+		<script type="text/javascript" src="{{ site.url }}/js/prefsEditorDemo.js"></script>
+		<script type="text/javascript" src="http://leafo.net/sticky-kit/src/jquery.sticky-kit.js"></script>
+  	</head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
-    
-    {% include prefs-includes.html %}
-  
-    <script type="text/javascript" src="{{ site.url }}/js/prefsEditorDemo.js"></script>
-    <script type="text/javascript" src="http://leafo.net/sticky-kit/src/jquery.sticky-kit.js"></script>
-  </head>
-
-
-	
 	<body class="fl-focus"><!-- HTML BODY -->
 	
-	      	<!-- BEGIN markup for Preference Editor -->
-      	<div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
-          	<!-- This is the div that will contain the Preference Editor component -->
-          	<div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
-          	<!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
-          	<div class="fl-panelBar">
-              	<span class="fl-prefsEditor-buttons">
-                  	<button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
-                  	<button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
-              	</span>
-          	</div>
+	<!-- BEGIN markup for Preference Editor -->
+	<div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
+    	<!-- This is the div that will contain the Preference Editor component -->
+    	<div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+    	<!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
+    	<div class="fl-panelBar">
+        	<span class="fl-prefsEditor-buttons">
+            	<button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
+            	<button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
+        	</span>
     	</div>
-      	<!-- END markup for Preference Editor -->
+		</div>
+	<!-- END markup for Preference Editor -->
 
 
-		<!-- The page-wide UI Enhancer needs to be initialized right away -->
-      	<script type="text/javascript">
-          $(document).ready(function () {
-              var prefsEditor = fluid.prefs.create(".flc-prefsEditor-separatedPanel", {
-                  build: {
-                      gradeNames: [
-                          "fluid.prefs.auxSchema.starter", // this will add the starter set
-                          "demo.prefsEditor.auxSchema.simplify", // this will add the simplify adjuster and enactor
-                          "demo.prefsEditor.progressiveEnhancement" // progressive enhancment
-                      ],
-                      primarySchema: demo.prefsEditor.primarySchema
-                  }
-              });
-          });
-      	</script>
+	<!-- The page-wide UI Enhancer needs to be initialized right away -->
+	<script type="text/javascript">
+    $(document).ready(function () {
+        var prefsEditor = fluid.prefs.create(".flc-prefsEditor-separatedPanel", {
+            build: {
+                gradeNames: [
+                    "fluid.prefs.auxSchema.starter", // this will add the starter set
+                    "demo.prefsEditor.auxSchema.simplify", // this will add the simplify adjuster and enactor
+                    "demo.prefsEditor.progressiveEnhancement" // progressive enhancment
+                ],
+                primarySchema: demo.prefsEditor.primarySchema
+            }
+        });
+    });
+	</script>
 
-    	{% include header.html %} <!-- HEADER / BANNER INCLUDE -->
+	
+	{% include header.html %} <!-- HEADER / BANNER INCLUDE -->
       
+	
 	<div id="content" class="site-content"> <!-- PAGE CONTENT -->
 	    	<div id="main" role="main" class="container" role="main">
 		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
@@ -83,6 +83,7 @@
 	    	</div>
     	</div>
 
+    	
     	{% include footer.html %} <!-- FOOTER INCLUDE -->
 
   	</body>
