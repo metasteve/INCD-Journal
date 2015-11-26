@@ -20,3 +20,5 @@ published: true
 ## Added:
 - ARIA landmark roles
 - UserPrefs Panel
+
+[support wiki](https://github.com/anosognosia/INCD-Journal/wiki "Support Wiki")
