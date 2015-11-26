@@ -19,4 +19,5 @@ This is my simple attempt at creating an easy to use, WCAG Compliant Design Jour
 
 <br>
 ##### Suggestions / Feedback
-if you have any suggestions or feedback, please don't hesitate to contact me at: edgar [at] metatecture.ca
+- if you have any suggestions or feedback, please don't hesitate to contact me at: edgar [at] metatecture.ca
+- if you have questions, please check out the [support wiki](https://github.com/anosognosia/INCD-Journal/wiki "Support Wiki")!
