@@ -9,10 +9,10 @@ This is a simple attempt at creating an easy to use, WCAG Compliant Design Journ
 #### The journal currently integrates: 
 
 ##### Accessibility:
-- [WAI-ARIA](https://en.wikipedia.org/wiki/WAI-ARIA "WAI-ARIA on Wikipedia")
+- [WAI-ARIA](https://en.wikipedia.org/wiki/WAI-ARIA "WAI-ARIA on Wikipedia") Landmarks
 - [Infusion Preferences Framework](http://build.fluidproject.org/infusion/demos/prefsFramework/ "Infusion Preferences Framework Demo")
 
 ##### Platform:
 - [Github](https://github.com/ "GitHub Homepage") + [GitHub Pages](https://pages.github.com/ "GitHub Pages Homepage") ([Jekyl](http://jekyllrb.com/docs/sites/ "Jekyl Homepage"))
-  - [Markdown](https://daringfireball.net/projects/markdown/syntax/ "Markdown Syntax Refernce")
+  - [Markdown](https://daringfireball.net/projects/markdown/syntax/ "Markdown Syntax Reference")
 - [Prose.io](http://prose.io/ "Prose.io Homepage")
