@@ -11,7 +11,7 @@ published: true
   - layouts
   - styling
 - **proper styling**
-  - **responsive <<<** 
+  - **responsive <<** 
   - accessible colour palette
 - clean up folders
 - break out layouts to be more illustrative
