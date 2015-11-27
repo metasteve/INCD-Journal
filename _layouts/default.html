@@ -96,7 +96,10 @@
 </div>
 		      	
 		      	<br>
-		      	<section role="complementary">
+		      	
+		      	<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--2-col"></div>
+  <div class="mdl-cell mdl-cell--8-col"><section role="complementary">
       		      		<h1>Journal Entries</h1>
 		      		{% assign posts = site.posts %}
 				{% for p in posts %}
@@ -104,6 +107,12 @@
 		    			<a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="{{site.url}}{{ p.url }}">{{ p.title }}</a>
 				{% endfor %}
 			</section>
+			</div>
+  <div class="mdl-cell mdl-cell--2-col">/div>
+</div>
+
+
+		      	
 	    	</div>
     	</div>
     	<br>
