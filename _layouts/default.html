@@ -63,14 +63,31 @@
 
 	
 	{% include header.html %} <!-- HEADER / BANNER INCLUDE -->
+	
+	<!-- Wide card with share menu button -->
+<style>
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
       
 	
 	<div id="content" class="site-content"> <!-- PAGE CONTENT -->
 	    	<div id="main" role="main" class="container" role="main">
 		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
+		      	
 		      	<div id="baked-content">
 		      		{{ content }}
 		      	</div>
+		      	
 		      	<br>
 		      	<section role="complementary">
       		      		<h1>Journal Entries</h1>
@@ -88,3 +105,18 @@
 
   	</body>
 </html>
+
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"> {{ content.title }} </h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    {{ content }}
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Read Entry
+    </a>
+  </div>
+</div>
