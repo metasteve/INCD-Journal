@@ -76,9 +76,14 @@
       		      		<h1>Journal Entries</h1>
 		      		{% assign posts = site.posts %}
 				{% for p in posts %}
-				<div class="item-block" style="background-color:#eee">
-				    <h3><a href="{{site.url}}{{ p.url }}">{{ p.title }}</a></h3>
-				</div>
+				
+				<!-- Accent-colored raised button with ripple -->
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  					<div class="item-block">
+				    		<h3><a href="{{site.url}}{{ p.url }}">{{ p.title }}</a></h3>
+					</div>
+				</button>
+				
 				{% endfor %}
 			</section>
 	    	</div>
