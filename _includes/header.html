@@ -1,19 +1,40 @@
-<header class="masthead clearfix" role="banner"> <!-- PAGE HEADER -->
-  
-  <nav> <!-- PAGE NAV(IGATION) -->
-    <div id="nav" class="site-nav" role="navigation">
-      <strong><a href="{{ site.baseurl }}/">Home</a></strong>
-      <strong><a href="{{ site.baseurl }}/todo.html">Todo</a></strong>
-    </div>
-  </nav>
-  
-  <div id="info" class="site-info">
-    <div id="info-group">
-      <!--
-      <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-      <p class="site-description">{{ site.description }}</p> -->
+<!-- Uses a transparent header that draws on top of the layout's background -->
+<style>
+.demo-layout-transparent {
+  background: url('../assets/demos/transparent.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: #212121;
+}
+</style>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent" role="banner">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
       <img src="{{ site.baseurl }}/assets/pizza_logo.png" alt="Inclusive Design Journal [Pizza Logo]">
+      <span class="mdl-layout-title">Inclusive Design Journal</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="{{ site.baseurl }}/" alt="Site Home">Home</a>
+        <a class="mdl-navigation__link" href="{{ site.baseurl }}/todo.html" alt="ToDo List">ToDo</a>
+      </nav>
     </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Drawer</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
   </div>
-  
-</header>
+  <main class="mdl-layout__content">
+  </main>
+</div>
