@@ -7,8 +7,8 @@
 		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
 		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-		<!--<link rel="stylesheet" href="{{site.url}}/css/style.css">
-		    
+		<link rel="stylesheet" href="{{site.url}}/css/style.css">
+		    <!--
 		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
 		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
 		    -->
@@ -80,7 +80,7 @@
 				<!-- Accent-colored raised button with ripple -->
 				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
   					<div class="item-block">
-				    		<h3><a href="{{site.url}}{{ p.url }}">{{ p.title }}</a></h3>
+				    		<a href="{{site.url}}{{ p.url }}">{{ p.title }}</a>
 					</div>
 				</button>
 				
