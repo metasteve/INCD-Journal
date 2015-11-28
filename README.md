@@ -12,6 +12,11 @@ This is my simple attempt at creating an easy to use, WCAG Compliant Design Jour
   - [Markdown](https://daringfireball.net/projects/markdown/syntax/ "Markdown Syntax Reference")
   - Versioning / Backup
   - Hosting
+- [Material Design Lite](http://www.getmdl.io/ "Google Material Design Lite Homepage")
+  - components
+  - responsive styling
+- [Material Design Icons](http://google.github.io/material-design-icons/ "MD Icons Website") 
+
 
 ##### Authoring
 - [Prose.io](http://prose.io/ "Prose.io Homepage") (web app)
