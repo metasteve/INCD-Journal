@@ -4,8 +4,6 @@ title: Todo
 published: true
 ---
 ## Todo:
-- **bootstrap** or google materials?
-  - on challenge 
 - **change narration language to english**
 - **documentation** this is the most important next step, so that others can start using the template
   - favicon
@@ -13,14 +11,16 @@ published: true
   - index.html
   - layouts
   - styling
-- **proper styling**
-  - **responsive <<** 
-  - accessible colour palette
 - clean up folders
 - break out layouts to be more illustrative
 
 
 ## Added:
+- Google Material Design Lite
+  - layout / styling
+  - responsive
+  - components
+  - icons
 - ARIA landmark roles
 - UserPrefs Panel
 
