@@ -1,6 +1,7 @@
 ---
-published: false
+published: true
 ---
+
 
 #Time well spent...
 Sometimes a potential gig is just too tempting, so you throw caution out the door and make time to hammer out something you wouldn't normally do; but then you've got it sorted and the client decides they need to you convince them it's still a good idea.
