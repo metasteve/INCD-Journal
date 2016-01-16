@@ -79,12 +79,9 @@
 		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
 			<br>
 
-			<paper-card heading="Card Title">
-			  <div class="card-content">			{{ content }}
-</div>
-			  <div class="card-actions">
-			    <paper-button raised>Some action</paper-button>
-			  </div>
+			<paper-card heading="">
+			  <div class="card-content">{{ content }}</div>
+
 			</paper-card>
 
 
@@ -101,9 +98,9 @@
 				      		{% assign posts = site.posts %}
 						{% for p in posts %}
 							<!-- Accent-colored raised button with ripple -->
-							<paper-button raised href="{{site.url}}{{ p.url }}">{{ p.title }}</paper-button>
+							<a href="{{site.url}}{{ p.url }}"><paper-button raised>{{p.title}}</paper-button></a>
 
-
+<!-- <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="{{site.url}}{{ p.url }}">{{ p.title }}</a> -->
 						{% endfor %}
 					</section>
 				</div>
