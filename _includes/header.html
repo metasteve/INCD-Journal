@@ -14,20 +14,36 @@
 </style>
 
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent" role="banner">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <img id="logo_image" class="mdl-layout-title" src="{{ site.baseurl }}/assets/pizza_logo.png" alt="Inclusive Design Journal [Pizza Logo]">
-      <!-- <span >Inclusive Design Journal</span> -->
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="{{ site.baseurl }}/" alt="Site Home">Home</a>
-        <a class="mdl-navigation__link" href="{{ site.baseurl }}/todo.html" alt="ToDo List">ToDo</a>
-      </nav>
-    </div>
+
   </header>
+  <!-- Main Area -->
+    <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+      <!-- Main Toolbar -->
+      <paper-toolbar id="mainToolbar" class="tall">
+        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+        <span class="space"></span>
+
+        <!-- Toolbar icons -->
+        <!-- <a class="mdl-navigation__link" href="{{ site.baseurl }}/" alt="Site Home">Home</a> -->
+        <a href="{{ site.baseurl }}/">        <paper-icon-button id="" icon="home" ></paper-icon-button>
+</a>
+
+        <paper-icon-button icon="search"></paper-icon-button>
+
+        <!-- Application name -->
+        <div class="middle middle-container">
+          <div class="app-name">Polymer Starter Kit</div>
+        </div>
+
+        <!-- Application sub title -->
+        <div class="bottom bottom-container">
+          <div class="bottom-title">The future of the web today</div>
+        </div>
+      </paper-toolbar>
+
+
+
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Drawer</span>
     <nav class="mdl-navigation">
