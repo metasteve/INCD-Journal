@@ -94,7 +94,8 @@
 			    };
 			  }
 			  paper-button.custom:hover {
-			    background-color: var(--paper-indigo-100);
+			    background-color: var(--paper-indigo-300);
+
 			  }
 			  paper-button.pink {
 			    color: var(--paper-pink-a200);
@@ -120,6 +121,12 @@
 			  }
 			</style>
 
+
+
+
+
+
+
 			<br>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--1-col"></div>
@@ -129,7 +136,13 @@
 				      		{% assign posts = site.posts %}
 						{% for p in posts %}
 							<!-- Accent-colored raised button with ripple -->
-							<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
+							<paper-card heading="{{p.title}} " image="{{site.url}}{{p.testVar}}">
+								<div class="card-content">      {{ p.excerpt }}</div>
+								  <div class="card-actions">
+										<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
+								  </div>
+							</paper-card>
+
 
 						{% endfor %}
 					</section>

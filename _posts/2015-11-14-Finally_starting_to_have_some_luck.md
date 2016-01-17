@@ -2,6 +2,8 @@
 layout: post
 title: Finally making some progress on this...
 published: true
+testVar: /images/touch/chrome-touch-icon-192x192.png
+
 ---
 
 
