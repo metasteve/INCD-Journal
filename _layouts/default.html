@@ -15,7 +15,7 @@
 
 		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 		<link rel="stylesheet" href="{{site.url}}/css/style.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 		    <!--
 		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
 		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
@@ -38,18 +38,7 @@
 
 	<body class="fl-focus"><!-- HTML BODY -->
 
-	<!-- BEGIN markup for Preference Editor -->
-	<div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
-    	<!-- This is the div that will contain the Preference Editor component -->
-    		<div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
-    		<!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
-    		<div class="fl-panelBar">
-        		<span class="fl-prefsEditor-buttons">
-            			<button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
-            			<button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
-        		</span>
-    		</div>
-	</div>
+
 	<!-- END markup for Preference Editor -->
 
 
@@ -87,7 +76,47 @@
 
 
 
+			<style is="custom-style">
+			  paper-button.custom {
+					margin-bottom: 10px;
+			    --paper-button-ink-color: var(--paper-pink-a200);
+			    /* These could also be individually defined for each of the
+			      specific css classes, but we'll just do it once as an example */
+			    --paper-button-flat-keyboard-focus: {
+			      background-color: var(--paper-pink-a200);
+			      color: white !important;
+			    };
+			    --paper-button-raised-keyboard-focus: {
+			      background-color: var(--paper-pink-a200) !important;
+			      color: white !important;
+			    };
+			  }
+			  paper-button.custom:hover {
+			    background-color: var(--paper-indigo-100);
+			  }
+			  paper-button.pink {
+			    color: var(--paper-pink-a200);
 
+			  }
+			  paper-button.indigo {
+			    background-color: var(--paper-indigo-500);
+			    color: white;
+			    --paper-button-raised-keyboard-focus: {
+			      background-color: var(--paper-pink-a200) !important;
+			      color: white !important;
+			    };
+			  }
+			  paper-button.green {
+			    background-color: var(--paper-green-500);
+			    color: white;
+			  }
+			  paper-button.green[active] {
+			    background-color: var(--paper-red-500);
+			  }
+			  paper-button.disabled {
+			    color: white;
+			  }
+			</style>
 
 			<br>
 			<div class="mdl-grid">
@@ -98,7 +127,7 @@
 				      		{% assign posts = site.posts %}
 						{% for p in posts %}
 							<!-- Accent-colored raised button with ripple -->
-							<a href="{{site.url}}{{ p.url }}"><paper-button raised>{{p.title}}</paper-button></a>
+							<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
 
 						{% endfor %}
 					</section>
