@@ -119,6 +119,26 @@
 			  paper-button.disabled {
 			    color: white;
 			  }
+
+
+
+
+				.flex-horizontal-with-ratios {
+				           @apply(--layout-horizontal);
+				         }
+				         .flexchild {
+				           @apply(--layout-flex-3);
+				         }
+				         .flex2child {
+				           @apply(--layout-flex-3);
+				         }
+				         .flex3child {
+				           @apply(--layout-flex-3);
+				         }
+				       }
+
+
+
 			</style>
 
 
@@ -127,14 +147,19 @@
 
 
 
-			<br>
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--1-col"></div>
-				<div class="mdl-cell mdl-cell--10-col">
-					<section role="complementary">
+
+
+
+
+
+
 						<h1>Journal Entries</h1>
-				      		{% assign posts = site.posts %}
+						<div class="container flex-horizontal-with-ratios">
+
+
+				    {% assign posts = site.posts %}
 						{% for p in posts %}
+<div class="flex3child">
 							<!-- Accent-colored raised button with ripple -->
 							<paper-card heading="{{p.title}} " image="{{site.url}}{{p.testVar}}">
 								<div class="card-content">      {{ p.excerpt }}</div>
@@ -143,8 +168,9 @@
 								  </div>
 							</paper-card>
 
-
+</div>
 						{% endfor %}
+						  </div>
 					</section>
 				</div>
 				<div class="mdl-cell mdl-cell--1-col"></div>
