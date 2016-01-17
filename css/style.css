@@ -29,3 +29,18 @@
   border-left: 0px solid #ccc !important;
 
 }
+
+
+.colourB{
+	background-color: blue !important;
+}
+.colourR{
+	background-color: red !important;
+}
+.colourG{
+	background-color: green !important;
+}
+
+.colourY{
+	background-color: yellow !important;
+}
