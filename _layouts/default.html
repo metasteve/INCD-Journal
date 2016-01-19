@@ -79,6 +79,7 @@
 			<style is="custom-style">
 			  paper-button.custom {
 					margin-bottom: 10px;
+					margin-top:10px;
 					padding:10px;
 					font-size: 12px;
 			    --paper-button-ink-color: var(--paper-pink-a200);
@@ -127,13 +128,13 @@
 				           @apply(--layout-horizontal);
 				         }
 				         .flexchild {
-				           @apply(--layout-flex-3);
+				           @apply(--layout-flex-2);
 				         }
 				         .flex2child {
-				           @apply(--layout-flex-3);
+				           @apply(--layout-flex-2);
 				         }
 				         .flex3child {
-				           @apply(--layout-flex-3);
+				           @apply(--layout-flex-2);
 									 @apply(--layout-justified);
 									 @apply(--layout-self-stretch);
 
@@ -150,25 +151,98 @@
 
 
 
+			<!-- <iron-grid-container>
+	        <iron-grid log>
+	            <div class="s12 example blue">
+	                <p>s12</p>
+	            </div>
+	            <div class="s12 m3 l2 example red">
+	                <p>s12 m3 l2</p>
+	            </div>
+	            <div class="s12 m6 l8 example red">
+	                <p>s12 m6 l8</p>
+	            </div>
+	            <div class="s12 m3 l2 example red">
+	                <p>s12 m3 l2</p>
+	            </div>
+	        </iron-grid>
+	        <iron-grid>
+	            <div class="s12 m6 l3 example purple">
+	                <p>s12 m6 l3</p>
+	            </div>
+	            <div class="s12 m6 l3 example purple">
+	                <p>s12 m6 l3</p>
+	            </div>
+	            <div class="s12 m6 l3 example purple">
+	                <p>s12 m6 l3</p>
+	            </div>
+	            <div class="s12 m6 l3 example purple">
+	                <p>s12 m6 l3</p>
+	            </div>
+	        </iron-grid>
+	        <pre>
+	            <code>
+	                &lt;iron-grid-container&gt;
+	                    &lt;iron-grid&gt;
+	                        &lt;div class="s12 example blue">&lt;p&gt;s12&lt;/p&gt;&lt/div&gt;
+	                        &lt;div class="s12 m3 l2 example red"&gt;&lt;p&gt;s12 m3 l2&lt;/p&gt;&lt;/div&gt;
+	                        &lt;div class="s12 m6 l8 example red"&gt;&lt;p&gt;s12 m6 l8&lt;/p&gt;&lt;/div&gt;
+	                        &lt;div class="s12 m3 l2 example red"&gt;&lt;p&gt;s12 m3 l2&lt;/p&gt;&lt;/div&gt;
+	                    &lt;/iron-grid&gt;
+	                    &lt;iron-grid&gt;
+	                        &lt;div class="s12 m6 l3 example purple"&gt;&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
+	                        &lt;div class="s12 m6 l3 example purple">&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
+	                        &lt;div class="s12 m6 l3 example purple">&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
+	                        &lt;div class="s12 m6 l3 example purple">&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
+	                    &lt;/iron-grid&gt;
+	                &lt;/iron-grid-container&gt;
+	            </code>
+	        </pre>
+	    </iron-grid-container> -->
+
+			<div class="horizontal layout " >
+  <div class="flex-3 horizontal layout wrap colourR" >
+			<div class="red1" >cats	</div>
+			<div class="red1" >cats	</div>
+			<div class="red1" >cats	</div>
+			<div class="red1" >cats	</div>
+			<div class="red1" >cats	</div>
 
 
-
-
-
+</div>
+  <div class="flex-2 wrap colourB">Beta11</div>
+  <div class="flex-2 wrap colourY">Gamma</div>
+  <!-- <div class="flex-2 colourG">Delta</div> -->
+</div>
 
 						<h1>Journal Entries</h1>
-						<div class="container flex-horizontal-with-ratios">
+						<div class="container horizontal layout wrap" >
 
 
 				    {% assign posts = site.posts %}
 						{% for p in posts %}
-<div class="flex3child">
+<div class="flex-3">
 							<!-- Accent-colored raised button with ripple -->
-							<paper-card heading="{{p.title}} " image="{{site.url}}{{p.testVar}}">
-								<div class="card-content">      {{ p.excerpt }}</div>
+							<paper-card  heading="{{p.title}}" preloadImage="true" fadeImage="true" image="{{site.url}}{{p.testVar}}">
+
+
+
+								<div class="card-content">
+									   {{ p.excerpt }}
+									 </div>
+
+
+									<div class="card-actions">
+										<paper-icon-button icon="favorite" >
+									 	Favorite
+									</paper-icon-button>
+								 	</div>
+
+
 								  <div class="card-actions">
 										<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
 								  </div>
+
 							</paper-card>
 
 </div>

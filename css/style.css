@@ -29,3 +29,35 @@
   border-left: 0px solid #ccc !important;
 
 }
+
+
+.colourB{
+	background-color: blue !important;
+  padding:30px;
+}
+.colourR{
+	background-color: red !important;
+  padding:30px;
+
+}
+.colourG{
+	background-color: green !important;
+  padding:30px;
+
+}
+
+.colourY{
+	background-color: yellow !important;
+  padding:30px;
+
+}
+
+.width1{
+  width: 100%;
+  background-color: blue;
+}
+.red1{
+  background-color: blue;
+  
+  width:33%;
+}
