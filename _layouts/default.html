@@ -79,7 +79,6 @@
 			<style is="custom-style">
 			  paper-button.custom {
 					margin-bottom: 10px;
-					margin-top:10px;
 					padding:10px;
 					font-size: 12px;
 			    --paper-button-ink-color: var(--paper-pink-a200);
@@ -128,13 +127,13 @@
 				           @apply(--layout-horizontal);
 				         }
 				         .flexchild {
-				           @apply(--layout-flex-2);
+				           @apply(--layout-flex-3);
 				         }
 				         .flex2child {
-				           @apply(--layout-flex-2);
+				           @apply(--layout-flex-3);
 				         }
 				         .flex3child {
-				           @apply(--layout-flex-2);
+				           @apply(--layout-flex-3);
 									 @apply(--layout-justified);
 									 @apply(--layout-self-stretch);
 
@@ -155,47 +154,21 @@
 
 
 
-			<div class="horizontal layout wrap" >
-  <div class="flex colourR" >Alpha</div>
-  <div class="flex colourB">Beta11</div>
-  <div class="flex colourY">Gamma</div>  <div class="flex colourY">Gamma</div>
-	<div class="flex colourY">Gamma</div>
-	<div class="flex colourY">Gamma</div>
-	<div class="flex colourY">Gamma</div>
-	<div class="flex colourY">Gamma</div>
-	<div class="flex colourY">Gamma</div>
 
-  <!-- <div class="flex-2 colourG">Delta</div> -->
-</div>
 
 						<h1>Journal Entries</h1>
-						<div class="container horizontal layout wrap" >
+						<div class="container flex-horizontal-with-ratios">
 
 
 				    {% assign posts = site.posts %}
 						{% for p in posts %}
-<div class="flex-3">
+<div class="flex3child">
 							<!-- Accent-colored raised button with ripple -->
-							<paper-card  heading="{{p.title}}" preloadImage="true" fadeImage="true" image="{{site.url}}{{p.testVar}}">
-
-
-
-								<div class="card-content">
-									   {{ p.excerpt }}
-									 </div>
-
-
-									<div class="card-actions">
-										<paper-icon-button icon="favorite" >
-									 	Favorite
-									</paper-icon-button>
-								 	</div>
-
-
+							<paper-card heading="{{p.title}} " image="{{site.url}}{{p.testVar}}">
+								<div class="card-content">      {{ p.excerpt }}</div>
 								  <div class="card-actions">
 										<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
 								  </div>
-
 							</paper-card>
 
 </div>

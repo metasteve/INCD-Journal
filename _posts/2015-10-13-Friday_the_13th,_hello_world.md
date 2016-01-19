@@ -2,7 +2,7 @@
 layout: post
 title: "Friday The 13th, Hello World."
 published: true
-testVar: /images/projects/aurora/aurora.png
+testVar: /images/touch/chrome-touch-icon-192x192.png
 
 ---
 
