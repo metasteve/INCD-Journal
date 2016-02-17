@@ -3,40 +3,43 @@
 ---
 <!DOCTYPE html>
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"
-	<head>
+<head>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>{{ page.title }} - {{ site.title }}</title>
-		<!-- <script src="{{ site.baseurl }}/bower_components/platform/platform.js"></script> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ page.title }} - {{ site.title }}</title>
+	<!-- <script src="{{ site.baseurl }}/bower_components/platform/platform.js"></script> -->
 
-		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-		<link rel="stylesheet" href="{{site.url}}/css/style.css">
-		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-		    <!--
-		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
-		    	<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
-		    -->
-		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.amber-red.min.css" />
-		<meta name="viewport" content="width=device-width">
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+	<link rel="stylesheet" href="{{site.url}}/css/style.css">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<!--
+	<link rel="stylesheet" href="{{site.url}}/stylesheets/styles.css">
+	<link rel="stylesheet" href="{{site.url}}/stylesheets/github-light.css">
+-->
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.amber-red.min.css" />
+<meta name="viewport" content="width=device-width">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico">
-		<link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico">
+<link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
 
-		{% include prefs-includes.html %}
+{% include prefs-includes.html %}
 
-		<script type="text/javascript" src="{{ site.url }}/js/prefsEditorDemo.js"></script>
-		<script type="text/javascript" src="http://leafo.net/sticky-kit/src/jquery.sticky-kit.js"></script>
-  	</head>
+<script type="text/javascript" src="{{ site.url }}/js/prefsEditorDemo.js"></script>
+<script type="text/javascript" src="http://leafo.net/sticky-kit/src/jquery.sticky-kit.js"></script>
+</head>
 
-	<body class="fl-focus"><!-- HTML BODY -->
+
+{% include header.html %} <!-- HEADER / BANNER INCLUDE -->
+
+<body class="fl-focus"><!-- HTML BODY -->
 
 
 	<!-- END markup for Preference Editor -->
@@ -44,222 +47,173 @@
 
 	<!-- The page-wide UI Enhancer needs to be initialized right away -->
 	<script type="text/javascript">
-	    $(document).ready(function () {
-	        var prefsEditor = fluid.prefs.create(".flc-prefsEditor-separatedPanel", {
-	            build: {
-	                gradeNames: [
-	                    "fluid.prefs.auxSchema.starter", // this will add the starter set
-	                    "demo.prefsEditor.auxSchema.simplify", // this will add the simplify adjuster and enactor
-	                    "demo.prefsEditor.progressiveEnhancement" // progressive enhancment
-	                ],
-	                primarySchema: demo.prefsEditor.primarySchema
-	            }
-	        });
-	    });
+	$(document).ready(function () {
+		var prefsEditor = fluid.prefs.create(".flc-prefsEditor-separatedPanel", {
+			build: {
+				gradeNames: [
+					"fluid.prefs.auxSchema.starter", // this will add the starter set
+					"demo.prefsEditor.auxSchema.simplify", // this will add the simplify adjuster and enactor
+					"demo.prefsEditor.progressiveEnhancement" // progressive enhancment
+				],
+				primarySchema: demo.prefsEditor.primarySchema
+			}
+		});
+	});
 	</script>
 
 
-	{% include header.html %} <!-- HEADER / BANNER INCLUDE -->
 
 	<!-- Wide card with share menu button -->
 
 	<div id="content" class="site-content"> <!-- PAGE CONTENT -->
-	    	<div id="main" role="main" class="container" role="main">
-		      	<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
+		<div id="main" role="main" class="container" role="main">
+			<div class="flc-toc-tocContainer toc"></div> <!-- Table of Contents DIV -->
 			<br>
 
 			<paper-card heading="">
-			  <div class="card-content">{{ content }}</div>
-
+				<div class="card-content">{{ content }}</div>
+			
 			</paper-card>
 
 
 
 
 			<style is="custom-style">
-			  paper-button.custom {
-					margin-bottom: 10px;
-					margin-top:10px;
-					padding:10px;
-					font-size: 12px;
-			    --paper-button-ink-color: var(--paper-pink-a200);
-			    /* These could also be individually defined for each of the
-			      specific css classes, but we'll just do it once as an example */
-			    --paper-button-flat-keyboard-focus: {
-			      background-color: var(--paper-pink-a200);
-			      color: white !important;
-			    };
-			    --paper-button-raised-keyboard-focus: {
-			      background-color: var(--paper-pink-a200) !important;
-			      color: white !important;
-			    };
-			  }
-			  paper-button.custom:hover {
-			    background-color: var(--paper-indigo-300);
+			paper-button.custom {
+				margin-bottom: 10px;
+				margin-top:10px;
+				padding:10px;
+				font-size: 12px;
+				--paper-button-ink-color: var(--paper-pink-a200);
+				/* These could also be individually defined for each of the
+				specific css classes, but we'll just do it once as an example */
+				--paper-button-flat-keyboard-focus: {
+					background-color: var(--paper-pink-a200);
+					color: white !important;
+				};
+				--paper-button-raised-keyboard-focus: {
+					background-color: var(--paper-pink-a200) !important;
+					color: white !important;
+				};
+			}
+			paper-button.custom:hover {
+				background-color: var(--paper-indigo-300);
 
-			  }
-			  paper-button.pink {
-			    color: var(--paper-pink-a200);
+			}
+			paper-button.pink {
+				color: var(--paper-pink-a200);
 
-			  }
-			  paper-button.indigo {
-			    background-color: var(--paper-indigo-500);
-			    color: white;
-			    --paper-button-raised-keyboard-focus: {
-			      background-color: var(--paper-pink-a200) !important;
-			      color: white !important;
-			    };
-			  }
-			  paper-button.green {
-			    background-color: var(--paper-green-500);
-			    color: white;
-			  }
-			  paper-button.green[active] {
-			    background-color: var(--paper-red-500);
-			  }
-			  paper-button.disabled {
-			    color: white;
-			  }
-
-
-
-
-				.flex-horizontal-with-ratios {
-				           @apply(--layout-horizontal);
-				         }
-				         .flexchild {
-				           @apply(--layout-flex-2);
-				         }
-				         .flex2child {
-				           @apply(--layout-flex-2);
-				         }
-				         .flex3child {
-				           @apply(--layout-flex-2);
-									 @apply(--layout-justified);
-									 @apply(--layout-self-stretch);
-
-				         }
-				       }
+			}
+			paper-button.indigo {
+				background-color: var(--paper-indigo-500);
+				color: white;
+				--paper-button-raised-keyboard-focus: {
+					background-color: var(--paper-pink-a200) !important;
+					color: white !important;
+				};
+			}
+			paper-button.green {
+				background-color: var(--paper-green-500);
+				color: white;
+			}
+			paper-button.green[active] {
+				background-color: var(--paper-red-500);
+			}
+			paper-button.disabled {
+				color: white;
+			}
 
 
 
-			</style>
+
+			.flex-horizontal-with-ratios {
+				@apply(--layout-horizontal);
+			}
+			.flexchild {
+				@apply(--layout-flex-2);
+			}
+			.flex2child {
+				@apply(--layout-flex-2);
+			}
+			.flex3child {
+				@apply(--layout-flex-2);
+				@apply(--layout-justified);
+				@apply(--layout-self-stretch);
+
+			}
+		}
 
 
+
+		</style>
 
 
 
 
 
-			<!-- <iron-grid-container>
-	        <iron-grid log>
-	            <div class="s12 example blue">
-	                <p>s12</p>
-	            </div>
-	            <div class="s12 m3 l2 example red">
-	                <p>s12 m3 l2</p>
-	            </div>
-	            <div class="s12 m6 l8 example red">
-	                <p>s12 m6 l8</p>
-	            </div>
-	            <div class="s12 m3 l2 example red">
-	                <p>s12 m3 l2</p>
-	            </div>
-	        </iron-grid>
-	        <iron-grid>
-	            <div class="s12 m6 l3 example purple">
-	                <p>s12 m6 l3</p>
-	            </div>
-	            <div class="s12 m6 l3 example purple">
-	                <p>s12 m6 l3</p>
-	            </div>
-	            <div class="s12 m6 l3 example purple">
-	                <p>s12 m6 l3</p>
-	            </div>
-	            <div class="s12 m6 l3 example purple">
-	                <p>s12 m6 l3</p>
-	            </div>
-	        </iron-grid>
-	        <pre>
-	            <code>
-	                &lt;iron-grid-container&gt;
-	                    &lt;iron-grid&gt;
-	                        &lt;div class="s12 example blue">&lt;p&gt;s12&lt;/p&gt;&lt/div&gt;
-	                        &lt;div class="s12 m3 l2 example red"&gt;&lt;p&gt;s12 m3 l2&lt;/p&gt;&lt;/div&gt;
-	                        &lt;div class="s12 m6 l8 example red"&gt;&lt;p&gt;s12 m6 l8&lt;/p&gt;&lt;/div&gt;
-	                        &lt;div class="s12 m3 l2 example red"&gt;&lt;p&gt;s12 m3 l2&lt;/p&gt;&lt;/div&gt;
-	                    &lt;/iron-grid&gt;
-	                    &lt;iron-grid&gt;
-	                        &lt;div class="s12 m6 l3 example purple"&gt;&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
-	                        &lt;div class="s12 m6 l3 example purple">&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
-	                        &lt;div class="s12 m6 l3 example purple">&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
-	                        &lt;div class="s12 m6 l3 example purple">&lt;p&gt;s12 m6 l3&lt;/p&gt;&lt;/div&gt;
-	                    &lt;/iron-grid&gt;
-	                &lt;/iron-grid-container&gt;
-	            </code>
-	        </pre>
-	    </iron-grid-container> -->
-
-			<div class="horizontal layout " >
-  <div class="flex-3 horizontal layout wrap colourR" >
-			<div class="red1" >cats!!!!!!	</div>
-			<div class="red1" >cats	</div>
-			<div class="red1" >cats	</div>
-			<div class="red1" >cats	</div>
-			<div class="red1" >cats	</div>
 
 
-</div>
-  <div class="flex-2 wrap colourB">Beta11</div>
-  <div class="flex-2 wrap colourY">Gamma</div>
-  <!-- <div class="flex-2 colourG">Delta</div> -->
+
+<div class="horizontal layout " >
+	<div class="flex-3 horizontal layout wrap colourR" >
+		<div class="red1" >cats!!!!!!	</div>
+		<div class="red1" >cats	</div>
+		<div class="red1" >cats	</div>
+		<div class="red1" >cats	</div>
+		<div class="red1" >cats	</div>
+
+
+	</div>
+	<div class="flex-2 wrap colourB">Beta11</div>
+	<div class="flex-2 wrap colourY">Gamma</div>
+	<!-- <div class="flex-2 colourG">Delta</div> -->
 </div>
 
-						<h1>Journal Entries</h1>
-						<div class="container horizontal layout wrap" >
+<h1>Journal Entries</h1>
+<div class="container horizontal layout wrap" >
 
 
-				    {% assign posts = site.posts %}
-						{% for p in posts %}
-<div class="flex-3">
-							<!-- Accent-colored raised button with ripple -->
-							<paper-card  heading="{{p.title}}" preloadImage="true" fadeImage="true" image="{{site.url}}{{p.testVar}}">
+	{% assign posts = site.posts %}
+	{% for p in posts %}
+	<div class="flex-3">
+		<!-- Accent-colored raised button with ripple -->
+		<paper-card  heading="{{p.title}}" preloadImage="true" fadeImage="true" image="{{site.url}}{{p.testVar}}">
 
 
 
-								<div class="card-content">
-									   {{ p.excerpt }}
-									 </div>
-
-
-									<div class="card-actions">
-										<paper-icon-button icon="favorite" >
-									 	Favorite
-									</paper-icon-button>
-								 	</div>
-
-
-								  <div class="card-actions">
-										<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
-								  </div>
-
-							</paper-card>
-
-</div>
-						{% endfor %}
-						  </div>
-					</section>
-				</div>
-				<div class="mdl-cell mdl-cell--1-col"></div>
+			<div class="card-content">
+				{{ p.excerpt }}
 			</div>
-	    	</div>
-    	</div>
 
 
-    	<!-- <i class="material-icons md-48">face</i> -->
+			<div class="card-actions">
+				<paper-icon-button icon="favorite" >
+					Favorite
+				</paper-icon-button>
+			</div>
 
 
-    	{% include footer.html %} <!-- FOOTER INCLUDE -->
+			<div class="card-actions">
+				<a href="{{site.url}}{{ p.url }}"><paper-button raised class="custom indigo">{{p.title}}</paper-button></a>
+			</div>
 
-  	</body>
+		</paper-card>
+
+	</div>
+	{% endfor %}
+</div>
+</section>
+</div>
+<div class="mdl-cell mdl-cell--1-col"></div>
+</div>
+</div>
+</div>
+
+
+<!-- <i class="material-icons md-48">face</i> -->
+
+
+{% include footer.html %} <!-- FOOTER INCLUDE -->
+
+</body>
 </html>
