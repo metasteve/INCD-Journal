@@ -13,7 +13,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style>
       :host {
-        background: black;
+        background: #FFF;
         visibility: hidden;
         @apply(--layout-vertical);
       }
@@ -55,8 +55,9 @@ Polymer({
       value: function() {
         return {
           'entry': [{
-            name: 'slide-down-animation',
-            node: this.$.toolbar
+            name: 'fade-in-animation',
+            node: this.$.toolbar,
+            timing: {duration: 2000}
           }, {
             animatable: this.$.grid,
             type: 'entry'

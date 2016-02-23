@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Friday The 13th, Hello World."
+title: "Post 1"
 published: true
-testVar: /images/projects/beam/beam.png
+pic1: http://lorempixel.com/1200/800
+color: "blue"
 ---
 
 
