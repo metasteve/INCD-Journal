@@ -3,7 +3,7 @@ layout: post
 title: "Post 1"
 published: true
 pic1: http://lorempixel.com/1200/800
-color: "blue"
+color: "red"
 ---
 
 

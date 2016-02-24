@@ -70,12 +70,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         height: calc(100% / 2.99);
       }
       .medium-tall{
-        width:100%;
-        vertical-align: bottom;
+        /*width:100%;*/
+        /*vertical-align: bottom;*/
+        height:60px;
         opacity: .5;
         background-color: black;
         padding-left: 0px;
         margin-left: 0px;
+        mix-blend-mode: overlay;
+
 
       }
       .title{
@@ -86,6 +89,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .top{
         padding-top:16px !important;
       }
+
+    .grey {
+/*-webkit-filter: grayscale(100%);
+filter: grayscale(100%);*/
+opacity: .7;
+mix-blend-mode: soft-light;
+
+}
+
     </style>
 
 
@@ -99,8 +111,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div class="top">[[item.value]]</div>
           <div class="bottom">[[item.color]]</div>
         </paper-toolbar>
-cats
-        <iron-image id="mainPhoto" style="width:100%; height:20%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image>
+
+        <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image>
+
 
 
       </div>
