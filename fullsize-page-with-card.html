@@ -24,6 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         left: 0;
         height: 100vh;
         width: 100vw;
+        opacity: .5;
       }
 
       .card {
@@ -77,9 +78,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
     <div id="card" class$="[[_computeCardClass(color)]]">
-      <div class="card2" id="cardTitle">
-      
-      </div>
+
 
       <!-- <iron-image id="mainPhoto" style="width:100%; height:100%;" preload fade sizing="cover" src="http://lorempixel.com/1200/800"></iron-image> -->
       <paper-toolbar  id="topBar" class="medium-tall">
@@ -177,21 +176,7 @@ node: this.$.backButton,
 timing: {
 delay: 1500, duration: 400
 }}
-,
-{
-name: 'slide-from-top-animation',
-node: this.$.cardTitle,
-transformOrigin: 10,
-timing: {
-delay: 500, duration: 900
-}}
-,
-{
-name: 'fade-in-animation0',
-node: this.$.cardTitle,
-timing: {
-delay: 600, duration: 900
-}}
+
 
           ],
             'exit': [{
