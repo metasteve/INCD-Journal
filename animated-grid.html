@@ -15,124 +15,145 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="animated-grid">
   <template>
-    <style include="shared-styles"></style>
-    <style>
+  <style include="shared-styles"></style>
+  <style>
 
-      :host {
-        display: block;
-        background: #000;
-      }
+  :host {
+    display: block;
+    background: #000;
+  }
 
-      .tile {
-        display: block;
-        float: left;
-        vertical-align: bottom;
-        width: calc(100% / 6);
-        height: calc(100% / 2.99);
-        bottom:0;
-        /*@apply(--paper-font-title);*/
-        @apply(--layout-vertical);
-        /*@apply(--layout-center-center);*/
-      }
+  .tile {
+    display: block;
+    float: left;
+    vertical-align: bottom;
+    width: calc(100% / 6);
+    height: calc(100% / 2.99);
+    bottom:0;
+    /*@apply(--paper-font-title);*/
+    @apply(--layout-vertical);
+    /*@apply(--layout-center-center);*/
+  }
 
-      .tile:nth-of-type(1) {
-        width: calc(100% / 3);
-        height: calc(100% / 3 * 2);
-      }
+  .tile:nth-of-type(1) {
+    width: calc(100% / 3);
+    height: calc(100% / 3 *2);
+  }
 
-      .tile:nth-of-type(4) {
-        width: calc(100% / 3);
-      }
+  .tile:nth-of-type(4) {
+    width: calc(100% / 3);
+  }
 
-      .tile:nth-of-type(5) {
-        width: calc(100% / 3);
-        height: calc(100% / 3 * 2);
-      }
+  .tile:nth-of-type(5) {
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+  }
 
-      .tile:nth-of-type(8) {
-        width: calc(100% / 3);
-        height: calc(100% / 2.99);
-      }
+  .tile:nth-of-type(8) {
+    width: calc(100% / 3);
+    height: calc(100% / 2.99);
+  }
+  /*.tile:nth-of-type(9) {
+    position: relative;;
+    top: calc(100% / 3 * 2);
+    left: 0;
+    width: calc(100% / 6);
+    height: calc(100% / 2.99);
+  }
 
-      .tile:nth-of-type(9) {
-        position: absolute;
-        top: calc(100% / 3 * 2);
-        left: 0;
-        width: calc(100% / 6);
-        height: calc(100% / 2.99);
-      }
+  .tile:nth-of-type(10) {
+    position: relative;;
+    top: calc(100% / 3 * 2);
+    left: calc(100% / 6);;
+    width: calc(100% / 6);
+    height: calc(100% / 2.99);
+  }*/
 
-      .tile:nth-of-type(10) {
-        position: absolute;
-        top: calc(100% / 3 * 2);
-        left: calc(100% / 6);;
-        width: calc(100% / 6);
-        height: calc(100% / 2.99);
-      }
-      .medium-tall{
-        /*width:100%;*/
-        /*vertical-align: bottom;*/
-        height:60px;
-        opacity: .5;
-        background-color: black;
-        padding-left: 0px;
-        margin-left: 0px;
-        mix-blend-mode: overlay;
-
-
-      }
-      .title{
-        margin-left: 10px !important;
-        padding:10px;
-        padding-left: 0px;
-      }
-      .top{
-        padding-top:16px !important;
-      }
-
-    .grey {
-/*-webkit-filter: grayscale(100%);
-filter: grayscale(100%);*/
-opacity: .7;
-mix-blend-mode: soft-light;
-
-}
-
-    </style>
+  .medium-tall{
+    /*width:100%;*/
+    /*vertical-align: bottom;*/
+    /*height:60px;*/
+    opacity: .5;
+    background-color: black;
+    padding-left: 0px;
+    margin-left: 0px;
+    mix-blend-mode: overlay;
 
 
+  }
+  .title{
+    /*margin-left: 10px !important;
+    padding:10px;
+    padding-left: 0px;*/
+  }
+  .top{
+    /*padding-top:16px !important;
+    padding-bottom:16px !important;*/
+
+  }
+
+  .grey {
+    /*-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);*/
+    opacity: .7;
+    mix-blend-mode: soft-light;
+
+  }
+  .topper{
+    padding:20px;
+  }
+  .topInfo{
+    padding:0;
+    position:absolute;
+    width:inherit;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .topInfoText{
+    padding:20px;
+    padding-left: 30px;
+    color: white;
+
+  }
+
+  .fit {
+    @apply(--layout-fit);
+  }
+  </style>
 
 
-    <template is="dom-repeat" items="[[config]]">
-
-      <div class$="[[_computeTileClass(item.color)]]">
-
-        <paper-toolbar id="topBar" class="medium-tall">
-          <div class="top">[[item.value]]</div>
-          <div class="bottom">[[item.color]]</div>
-        </paper-toolbar>
-
-        <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image>
 
 
+  <template is="dom-repeat" items="[[config]]">
 
-      </div>
+    <div class$="[[_computeTileClass(item.color)]]">
 
-    </template>
+      <paper-material elevation="1" id="topBar" class="topInfo">
+        <div class="topInfoText">[[item.value]]</div>
+        <div class="topInfoText">[[item.color]]</div>
+      </paper-material>
+
+      <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image>
 
 
 
+    </div>
 
   </template>
 
+
+
+
+</template>
+
 </dom-module>
-<paper-toolbar  id="topBar" class="medium-tall">
-<div class="top title">Section 2</div>
-<paper-icon-button id="backButton" class="giant" icon="expand-less" on-click="_showHome"></paper-icon-button>
+<paper-material elevation="2"  id="topBar" >
+  <div class="top title">Section 2</div>
+  <paper-icon-button id="backButton" class="giant" icon="expand-less" on-click="_showHome"></paper-icon-button>
 
 
-<div class="bottom title">This is section 2</div>
-</paper-toolbar>
+  <div class="bottom title">This is section 2</div>
+</paper-material>
 <script>
 
 // postArray = [];
@@ -152,10 +173,10 @@ href="{{site.url}}{{ p.url }}
 {% endfor %} -->
 
 <iron-ajax
-        auto
-        url="site.json"
-        handle-as="json"
-        last-response="{{jsondata}}">
+auto
+url="site.json"
+handle-as="json"
+last-response="{{jsondata}}">
 </iron-ajax>
 
 
@@ -163,75 +184,75 @@ href="{{site.url}}{{ p.url }}
 
 
 
-  Polymer({
+Polymer({
 
-    is: 'animated-grid',
+  is: 'animated-grid',
 
-    behaviors: [
-      Polymer.NeonSharedElementAnimatableBehavior
-    ],
+  behaviors: [
+    Polymer.NeonSharedElementAnimatableBehavior
+  ],
 
-    properties: {
+  properties: {
 
-      config: {
-        type: Array,
-        value: function() {
-          return [
-            {% assign posts = site.posts %}
-            {% for p in posts %}{value: '{{p.title}}', color: '{{p.color}}', pic1: '{{p.pic1}}'},{% endfor %}
-          ]
-        }
-      },
+    config: {
+      type: Array,
+      value: function() {
+        return [
+          {% assign posts = site.posts %}
+          {% for p in posts %}{value: '{{p.title}}', color: '{{p.color}}', pic1: '{{p.pic1}}'},{% endfor %}
+        ]
+      }
+    },
 
-      animationConfig: {
-        type: Object,
-        value: function() {
-          return {
-            'exit': [{
-              name: 'ripple-animation',
-              id: 'ripple',
-              fromPage: this
-            }, {
-              name: 'hero-animation',
-              id: 'hero',
-              fromPage: this
-            }]
-          }
+    animationConfig: {
+      type: Object,
+      value: function() {
+        return {
+          'exit': [{
+            name: 'ripple-animation',
+            id: 'ripple',
+            fromPage: this
+          }, {
+            name: 'hero-animation',
+            id: 'hero',
+            fromPage: this
+          }]
         }
       }
-
-    },
-
-    listeners: {
-      click: '_onClick'
-    },
-
-    _computeTileClass: function(color) {
-      return 'tile ' + color + '-300';
-    },
-
-    _onClick: function(event) {
-      var target = event.target;
-      while (target !== this && !target._templateInstance) {
-        target = target.parentNode;
-      }
-
-      // configure the page animation
-      this.sharedElements = {
-        'hero': target,
-        'ripple': target
-      };
-      this.animationConfig['exit'][0].gesture = {
-        x: event.x || event.pageX,
-        y: event.y || event.pageY
-      };
-
-      this.fire('tile-click', {
-        tile: target,
-        data: target._templateInstance.item
-      });
     }
 
-  });
+  },
+
+  listeners: {
+    click: '_onClick'
+  },
+
+  _computeTileClass: function(color) {
+    return 'tile ' + color + '-300';
+  },
+
+  _onClick: function(event) {
+    var target = event.target;
+    while (target !== this && !target._templateInstance) {
+      target = target.parentNode;
+    }
+
+    // configure the page animation
+    this.sharedElements = {
+      'hero': target,
+      'ripple': target
+    };
+    this.animationConfig['exit'][0].gesture = {
+      x: event.x || event.pageX,
+      y: event.y || event.pageY
+    };
+
+    this.fire('tile-click', {
+      tile: target,
+      data: target._templateInstance.item
+    });
+  }
+
+});
 
 </script>
