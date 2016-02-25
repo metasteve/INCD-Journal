@@ -24,7 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   .tile {
-    display: block;
+    display: inline-block;
     float: left;
     vertical-align: bottom;
     width: calc(100% / 6);
@@ -124,7 +124,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       width: calc(100% / 2);
       height: calc(100% / 3);
     }
-
+    .tile:nth-of-type(7) {
+      width: calc(100% / 2);
+      height: calc(100% / 2.99);
+    }
     .tile:nth-of-type(8) {
       width: calc(100% / 2);
       height: calc(100% / 2.99);
@@ -165,12 +168,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       width: calc(100% / 2);
       height: calc(100% / 3);
     }
-
+    .tile:nth-of-type(7) {
+      width: calc(100% / 2);
+      height: calc(100% / 2.99);
+    }
     .tile:nth-of-type(8) {
       width: calc(100% / 2);
       height: calc(100% / 2.99);
     }
     .tile:nth-of-type(9) {
+      width: calc(100% / 2);
+      height: calc(100% / 2.99);
+    }
+    .tile:nth-of-type(10) {
       width: calc(100% / 2);
       height: calc(100% / 2.99);
     }
@@ -335,10 +345,8 @@ Polymer({
           'exit': [{
             name: 'ripple-animation',
             id: 'ripple',
-            fromPage: this
-          }, {
-            name: 'hero-animation',
-            id: 'hero',
+            timing:{duration: 1700},
+
             fromPage: this
           }]
         }
@@ -357,6 +365,9 @@ Polymer({
 
   _onClick: function(event) {
     var target = event.target;
+    $("html, body").animate({
+                scrollTop: 0
+            }, 600);
     while (target !== this && !target._templateInstance) {
       target = target.parentNode;
     }

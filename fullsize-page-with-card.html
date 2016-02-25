@@ -26,7 +26,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      }
      .card {
        position: relative;
-       margin: 200px 100px 0;
+       margin: 0px 100px 0;
        height: 700px;
      }
 
@@ -139,25 +139,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               name: 'ripple-animation',
               id: 'ripple',
               toPage: this,
-            }, {
-              name: 'hero-animation',
-              id: 'hero',
-              toPage: this,
-              timing: {
-                delay: 150
-              },
-              name: 'hero-animation',
-                id: 'hero',
-                toPage: this,
-                timing: {
-                  delay: 150
-                }
-              },
+            },{
+  name: 'scale-up-animation',
+  node: this.$.card,
+  timing: {
+    delay: 600, duration: 1500
+  }},{
+  name: 'fade-in-animation',
+  node: this.$.card,
+  timing: {
+    delay: 1000, duration: 1000
+  }},
               {
   name: 'fade-in-animation',
   node: this.$.mainPhoto,
   timing: {
-    delay: 1200, duration: 1500
+    delay: 2200, duration: 1500
   }
 },
 {
