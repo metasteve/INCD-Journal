@@ -15,20 +15,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style>
 
     :host {
-       display: block;
-     }
-     .fixed {
-       position: fixed;
-       top: 0;
-       left: 0;
-       height: 100vh;
-       width: 100vw;
-     }
-     .card {
-       position: relative;
-       margin: 0px 100px 0;
-       height: 700px;
-     }
+         display: block;
+       }
+       .fixed {
+         position: fixed;
+         top: 0;
+         left: 0;
+         height: 100vh;
+         width: 100vw;
+       }
+       .card {
+         position: fixed;
+         top:0;
+         height: 50vh;
+         width: 20vw;
+         margin: 200px 100px 0;
+       }
 
     </style>
 
@@ -87,7 +89,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <div class="bottom title">[[color]]</div>
 </paper-toolbar>
 
-      <iron-image id="mainPhoto" style="width:50%; height:100%; background-color: lightgray;"
+      <iron-image id="mainPhoto" style="width:100%; height:100%; background-color: lightgray;"
   sizing="cover" preload fade src="http://lorempixel.com/1200/800"></iron-image>
 
 
@@ -95,6 +97,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </div>
 
   </template>
+
+
+
 
 </dom-module>
 
@@ -139,22 +144,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               name: 'ripple-animation',
               id: 'ripple',
               toPage: this,
-            },{
-  name: 'scale-up-animation',
-  node: this.$.card,
-  timing: {
-    delay: 600, duration: 1500
-  }},{
-  name: 'fade-in-animation',
-  node: this.$.card,
-  timing: {
-    delay: 1000, duration: 1000
-  }},
+            }, {
+              name: 'hero-animation',
+              id: 'hero',
+              toPage: this,
+              timing: {
+                delay: 150
+              },
+              name: 'hero-animation',
+                id: 'hero',
+                toPage: this,
+                timing: {
+                  delay: 150
+                }
+              },
               {
   name: 'fade-in-animation',
   node: this.$.mainPhoto,
   timing: {
-    delay: 2200, duration: 1500
+    delay: 1200, duration: 1500
   }
 },
 {
