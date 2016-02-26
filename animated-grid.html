@@ -369,7 +369,7 @@ Polymer({
   },
 
   _onClick: function(event) {
-    $('.cart_module').stop(true, true).delay(300).animate({scrollTop:'0px'}, 400);
+    $('html,body').stop(true, true).delay(300).animate({scrollTop:'0px'}, 400);
 
     var target = event.target;
 
