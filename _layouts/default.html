@@ -141,7 +141,7 @@ width: 100%;
 
 			<animated-grid on-tile-click="_onTileClick"></animated-grid>
 
-			<fullsize-page-with-card id="fullsize-card">
+			<fullsize-page-with-card id="fullsize-page-with-card">
 			</fullsize-page-with-card>
 		</neon-animated-pages>
 		<!-- <iron-image id="mainPhoto" style="width:100%; height:100%;" preload fade sizing="cover" src="http://lorempixel.com/1200/800"></iron-image> -->
@@ -154,9 +154,9 @@ width: 100%;
 		var scope = document.querySelector('template[is="dom-bind"]');
 
 		scope._onTileClick = function(event) {
-			this.$['fullsize-card'].color = event.detail.data.color;
-			this.$['fullsize-card'].value = event.detail.data.value;
-			this.$['fullsize-card'].id = event.detail.data.id;
+			this.$['fullsize-page-with-card'].color = event.detail.data.color;
+			this.$['fullsize-page-with-card'].value = event.detail.data.value;
+			this.$['fullsize-page-with-card'].id = event.detail.data.id;
 
 			this.$.pages.selected = 1;
 		};
