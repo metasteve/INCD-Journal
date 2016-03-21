@@ -72,6 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
   <style is="custom-style">
+
   paper-icon-button.giant {
     width: 100px;
     height: 100px;
@@ -98,7 +99,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   opacity: .5;
 }
 
+
+
+
 </style>
+
+
+
+<style is="custom-style">
+
+paper-fab.blue {
+  /*width:200px;*/
+  /*background-color: var(--paper-light-blue-500);*/
+    --paper-fab-background: var(--paper-light-blue-500);
+    --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+
+  }
+paper-fab.yellow {
+    --paper-fab-background: var(--paper-yellow-500);
+    --paper-fab-keyboard-focus-background: var(--paper-yellow-900);
+  }
+  </style>
+
 
 
 
@@ -108,10 +130,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
     <div id="card" class$="[[_computeCardClass(color)]]">
-
-
-      <!-- <iron-image id="mainPhoto" style="width:100%; height:100%;" preload fade sizing="cover" src="http://lorempixel.com/1200/800"></iron-image> -->
-      <paper-fab id="backButton" class="big giant" icon="clear" on-click="_showHome"></paper-fab>
+      <paper-fab id="backButton" class$="big giant [[_computeButtonBackgroundClass(color)]]" icon="clear" on-click="_showHome"></paper-fab>
 
       <div id="mainPhoto">
             <template is="juicy-html" id="loadedContent" content$="{{site.url}}[[_computeURL(id)]]"></template>
@@ -249,11 +268,17 @@ animationComplete: function() {
       return cls;
     },
 
-
     _computeFixedBackgroundClass: function(color) {
       var cls = 'fixed';
       if (color) {
         cls += ' ' + color + '-100';
+      }
+      return cls;
+    },
+    _computeButtonBackgroundClass: function(color) {
+      var cls = '';
+      if (color) {
+        cls += '' + color + '';
       }
       return cls;
     },

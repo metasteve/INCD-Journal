@@ -132,7 +132,7 @@ width: 100%;
 	<template is="dom-bind">
 
 
-		<paper-toolbar class="tall">
+		<paper-toolbar waterfall class="tall">
 		  <iron-icon class="big" icon="accessibility"></iron-icon>
 		  <div class="top title">Inclusive Design Research Journal</div>
 
@@ -157,6 +157,7 @@ width: 100%;
 			this.$['fullsize-page-with-card'].color = event.detail.data.color;
 			this.$['fullsize-page-with-card'].value = event.detail.data.value;
 			this.$['fullsize-page-with-card'].id = event.detail.data.id;
+
 
 			this.$.pages.selected = 1;
 		};

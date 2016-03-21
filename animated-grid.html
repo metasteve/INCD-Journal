@@ -37,7 +37,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   .tile:nth-of-type(1) {
     width: calc(100% / 3);
-    height: calc(100% / 3 *2);
+    height: calc(100% / 2.999 *2);
   }
 
   .tile:nth-of-type(4) {
@@ -258,8 +258,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
   <template is="dom-repeat" items="[[config]]">
+    
 
     <div class$="[[_computeTileClass(item.color)]]">
+
 
       <paper-material elevation="1" id="topBar" class="topInfo">
         <div class="topInfoText">[[item.value]]</div>
@@ -305,12 +307,12 @@ href="{{site.url}}{{ p.url }}
 
 {% endfor %} -->
 
-<iron-ajax
+<!-- <iron-ajax
 auto
 url="site.json"
 handle-as="json"
 last-response="{{jsondata}}">
-</iron-ajax>
+</iron-ajax> -->
 
 
 <script>
