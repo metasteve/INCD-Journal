@@ -19,81 +19,89 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style>
 
   :host {
-    display: block;
+    display: flex;
+    flex-wrap:wrap;
+
     background: #000;
   }
 
   .tile {
-    display: block;
-    float: left;
-    vertical-align: bottom;
-    width: calc(100% / 6);
-    height: calc(100% / 2.99);
-    bottom:0;
+    /*display: flex;*/
+    /*float: left;*/
+    /*vertical-align: bottom;*/
+    /*width: calc(100% / 6);
+
+    height: calc(100% / 2.99);*/
+    /*max-width: 550px;
+    min-width: 300px;
+    max-height: 300px;*/
+    flex: 25% ;
+    /*bottom:0;*/
     /*@apply(--paper-font-title);*/
-    @apply(--layout-vertical);
+    /*@apply(--layout-vertical);*/
     /*@apply(--layout-center-center);*/
   }
 
   .tile:nth-of-type(1) {
-    width: calc(100% / 3);
-    height: calc(100% / 2.999 *2);
+    /*flex: 1 1;*/
+    /*min-width: calc(100% / 2);
+    max-height: 600px;*/
+
+    /*height: calc(100% / 2.999 *2);*/
   }
 
   .tile:nth-of-type(4) {
-    width: calc(100% / 3);
+    /*width: calc(100% / 3);*/
   }
 
   .tile:nth-of-type(5) {
-    width: calc(100% / 3);
-    height: calc(100% / 2.99);
+    /*width: calc(100% / 3);
+    height: calc(100% / 2.99);*/
   }
   .tile:nth-of-type(7) {
-    width: calc(100% / 6);
-    height: calc(100% / 2.99);
+    /*width: calc(100% / 6);
+    height: calc(100% / 2.99);*/
   }
   .tile:nth-of-type(8) {
-    width: calc(100% / 1.5);
-    height: calc(100% / 2.99);
+    /*width: calc(100% / 1.5);
+    height: calc(100% / 2.99);*/
   }
   @media all and (max-width: 1280px) {
 
     .tile {
-      display: block;
+      /*display: block;
       float: left;
       vertical-align: bottom;
       width: calc(100% /6);
       height: calc(100% / 2.99);
       bottom:0;
-      /*@apply(--paper-font-title);*/
-      @apply(--layout-vertical);
-      /*@apply(--layout-center-center);*/
+      @apply(--layout-vertical);*/
     }
 
     .tile:nth-of-type(1) {
-      width: calc(100% /2);
-      height: calc(100% / 3 *2);
+      /*width: calc(100% /2);
+      height: calc(100% / 3 *2);*/
     }
 
     .tile:nth-of-type(4) {
-      width: calc(100% / 6);
+      /*width: calc(100% / 6);*/
     }
 
     .tile:nth-of-type(5) {
-      width: calc(100% / 2);
-      height: calc(100% / 3);
+      /*width: calc(100% / 2);
+      height: calc(100% / 3);*/
     }
     .tile:nth-of-type(7) {
-      width: calc(100% / 3);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 3);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(8) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(9) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
   }
 
@@ -103,41 +111,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   @media all and (max-width: 1024px) {
 
     .tile {
-      display: block;
+      /*display: block;
       float: left;
       vertical-align: bottom;
       width: calc(100% /2);
       height: calc(100% / 2.99);
       bottom:0;
-      /*@apply(--paper-font-title);*/
-      @apply(--layout-vertical);
-      /*@apply(--layout-center-center);*/
+      @apply(--layout-vertical);*/
+      flex: 50%;
     }
 
     .tile:nth-of-type(1) {
-      width: calc(100% /2);
-      height: calc(100% / 3 *2);
+      /*width: calc(100% /2);
+      height: calc(100% / 3 *2);*/
     }
 
     .tile:nth-of-type(4) {
-      width: calc(100%);
+      /*width: calc(100%);*/
     }
 
     .tile:nth-of-type(5) {
-      width: calc(100% / 2);
-      height: calc(100% / 3);
+      /*width: calc(100% / 2);
+      height: calc(100% / 3);*/
     }
     .tile:nth-of-type(7) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(8) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(9) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
   }
 
@@ -147,128 +154,97 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   @media all and (max-width: 640px) {
 
     .tile {
-      display: block;
+      flex: 50%;
+      /*display: block;
       float: left;
       vertical-align: bottom;
       width: calc(100% );
       height: calc(100% / 2.99);
       bottom:0;
-      /*@apply(--paper-font-title);*/
-      @apply(--layout-vertical);
-      /*@apply(--layout-center-center);*/
+      @apply(--layout-vertical);*/
     }
 
     .tile:nth-of-type(1) {
-      width: calc(100% );
-      height: calc(100% / 3 *2);
+      /*width: calc(100% );
+      height: calc(100% / 3 *2);*/
     }
 
     .tile:nth-of-type(4) {
-      width: calc(100% / 2);
+      /*width: calc(100% / 2);*/
     }
 
     .tile:nth-of-type(5) {
-      width: calc(100% / 2);
-      height: calc(100% / 3);
+      /*width: calc(100% / 2);
+      height: calc(100% / 3);*/
     }
     .tile:nth-of-type(7) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(8) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(9) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
     .tile:nth-of-type(10) {
-      width: calc(100% / 2);
-      height: calc(100% / 2.99);
+      /*width: calc(100% / 2);
+      height: calc(100% / 2.99);*/
     }
 }
-  .medium-tall{
-    /*width:100%;*/
-    /*vertical-align: bottom;*/
-    /*height:60px;*/
-    opacity: .5;
-    background-color: black;
-    padding-left: 0px;
-    margin-left: 0px;
-    mix-blend-mode: overlay;
-
-
-  }
-  .title{
-    /*margin-left: 10px !important;
-    padding:10px;
-    padding-left: 0px;*/
-  }
-  .top{
-    /*padding-top:16px !important;
-    padding-bottom:16px !important;*/
-
-  }
-
-  .grey {
-    /*-webkit-filter: grayscale(100%);
-    filter: grayscale(100%);*/
-    opacity: .7;
-    mix-blend-mode: soft-light;
-
-  }
-  .topper{
-    padding:20px;
-  }
-  .topInfo{
-    padding:0;
-    position:absolute;
-    width:inherit;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .topInfoText{
-    padding:20px;
-    padding-bottom:0px;
-    padding-left: 30px;
-    color: white;
-    font-weight: bold;
-
-
-  }
-  .topInfoText2{
-    padding:20px;
-    padding-top: 10px;
-    padding-left: 30px;
-    color: white;
-    /*font-weight: bold;*/
-
-
-  }
 
   .fit {
     @apply(--layout-fit);
   }
   .title{
   }
+
+  .transperant img{
+    opacity: .1;
+  }
   </style>
 
 
 
 
-  <template is="dom-repeat" items="[[config]]">
-    
-
-    <div class$="[[_computeTileClass(item.color)]]">
+  <template is="dom-repeat" items="[[config]]" class="layout-vertical">
 
 
+    <div class$="[[_computeTileClass(item.color)]] vertical flex layout-vertical  ">
+
+
+      <paper-card  class="transperant"  heading="[[item.value]]" image="[[item.pic1]]">
+        <div  class="card-content">
+            [[item.subTitle]]
+        </div>
+
+        <div class$="[[_computeTileClass(item.color)]] card-actions">
+          <paper-icon-button icon="favorite" title="Heart" class="pink"></paper-icon-button>
+          <paper-icon-button icon="assignment" title="Assignment" class="pink"></paper-icon-button>
+          <paper-icon-button icon="check-circle" title="Checked" class=$"[[_computeTileClass(item.color)]]"></paper-icon-button>
+          <paper-icon-button icon="create" title="Edit" class="pink" style="margin-left: auto;"></paper-icon-button>
+
+
+
+
+        </div>
+      </paper-card>
+<!--
+      <paper-card image="[[item.pic1]]" class$="[[_computeTileClass(item.color)]]">
+    <div class="card-content">[[item.value]]</div>
+  </paper-card> -->
+
+
+
+      <!--
       <paper-material elevation="1" id="topBar" class="topInfo">
         <div class="topInfoText">[[item.value]]</div>
         <div class="topInfoText2">[[item.subTitle]]</div>
       </paper-material>
 
-      <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image>
+      <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image> -->
 
 
 
@@ -282,13 +258,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </template>
 
 </dom-module>
-<paper-material elevation="2"  id="topBar" >
-  <div class="top title">Section 2</div>
-  <paper-icon-button id="backButton" class="giant" icon="expand-less" on-click="_showHome"></paper-icon-button>
 
-
-  <div class="bottom title">This is section 2</div>
-</paper-material>
 <script>
 
 // postArray = [];
