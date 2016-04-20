@@ -99,6 +99,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   opacity: .5;
 }
 
+.border1{
+  width:100%;
+  top:0;
+}
 
 
 
@@ -130,16 +134,32 @@ paper-fab.yellow {
 
 
     <div id="card" class$="[[_computeCardClass(color)]]">
-
       <paper-fab id="backButton" class$="big giant [[_computeButtonBackgroundClass(color)]]" icon="clear" on-click="_showHome"></paper-fab>
 
 
-<script>
+      <div id="mainPhoto">
 
-</script>
-      <!-- <div id="mainPhoto">
-            <template is="juicy-html" id="loadedContent" content$="{{site.url}}[[_computeURL(id)]]"></template>
-      </div> -->
+    <paper-card  class="border1 transperant flex-1 vertical"  heading="  [[value]]" image="[[pic]]">
+      <div  class="card-content flex">
+        [[color]]
+
+      </div>
+
+      <div class$="[[_computeTileClass(item.color)]] card-actions flex">
+        <paper-icon-button icon="favorite" title="Heart" class="pink"></paper-icon-button>
+        <paper-icon-button icon="assignment" title="Assignment" class="pink"></paper-icon-button>
+        <paper-icon-button icon="check-circle" title="Checked" class=$"[[_computeTileClass(item.color)]]"></paper-icon-button>
+        <paper-icon-button icon="create" title="Edit" class="pink" style="margin-left: auto;"></paper-icon-button>
+
+
+
+
+      </div>
+
+    </paper-card>
+
+            <!-- <template is="juicy-html" id="loadedContent" content$="{{site.url}}[[_computeURL(id)]]"></template> -->
+      </div>
 
 
 </paper-toolbar>
