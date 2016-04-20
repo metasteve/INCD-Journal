@@ -17,7 +17,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
   <style include="shared-styles"></style>
   <style>
-
+.toolbar-tools.paper-toolbar .title{
+  font-size: 110% !important;
+}
   :host {
     display: flex;
     flex-wrap:wrap;
@@ -76,6 +78,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       height: calc(100% / 2.99);
       bottom:0;
       @apply(--layout-vertical);*/
+      flex:50%;
     }
 
     .tile:nth-of-type(1) {
@@ -154,7 +157,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   @media all and (max-width: 640px) {
 
     .tile {
-      flex: 50%;
+      flex: 100%;
       /*display: block;
       float: left;
       vertical-align: bottom;
@@ -204,23 +207,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   .transperant img{
     opacity: .1;
   }
+
+
   </style>
 
 
 
+  <!-- {% assign posts = site.posts %}
+  {% for p in posts %}
 
-  <template is="dom-repeat" items="[[config]]" class="layout-vertical">
+
+  <paper-card  class="transperant"  heading="{{p.title}}" image="{{p.pic1}}">
+    <div  class="card-content">
+        {{ p.excerpt }}
+    </div>
+
+    <div class$="[[_computeTileClass({{p.color}})]] card-actions">
+      <paper-icon-button icon="favorite" title="Heart" class="pink"></paper-icon-button>
+      <paper-icon-button icon="assignment" title="Assignment" class="pink"></paper-icon-button>
+      <paper-icon-button icon="check-circle" title="Checked" class=$"[[_computeTileClass(item.color)]]"></paper-icon-button>
+      <paper-icon-button icon="create" title="Edit" class="pink" style="margin-left: auto;"></paper-icon-button>
+  </div>
+
+  </paper-card>
+  {% endfor %} -->
+
+
+  <!-- href="{{site.url}}{{ p.url }} -->
+
+  <template is="dom-repeat" items="[[config]]" class="vertical">
 
 
     <div class$="[[_computeTileClass(item.color)]] vertical flex layout-vertical  ">
 
 
-      <paper-card  class="transperant"  heading="[[item.value]]" image="[[item.pic1]]">
-        <div  class="card-content">
+      <paper-card  class="transperant flex-1 vertical"  heading="[[item.value]]" image="[[item.pic1]]">
+        <div  class="card-content flex">
             [[item.subTitle]]
         </div>
 
-        <div class$="[[_computeTileClass(item.color)]] card-actions">
+        <div class$="[[_computeTileClass(item.color)]] card-actions flex">
           <paper-icon-button icon="favorite" title="Heart" class="pink"></paper-icon-button>
           <paper-icon-button icon="assignment" title="Assignment" class="pink"></paper-icon-button>
           <paper-icon-button icon="check-circle" title="Checked" class=$"[[_computeTileClass(item.color)]]"></paper-icon-button>
@@ -230,27 +256,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
         </div>
+
       </paper-card>
-<!--
-      <paper-card image="[[item.pic1]]" class$="[[_computeTileClass(item.color)]]">
-    <div class="card-content">[[item.value]]</div>
-  </paper-card> -->
-
-
-
-      <!--
-      <paper-material elevation="1" id="topBar" class="topInfo">
-        <div class="topInfoText">[[item.value]]</div>
-        <div class="topInfoText2">[[item.subTitle]]</div>
-      </paper-material>
-
-      <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image> -->
-
-
 
     </div>
 
   </template>
+
+  <!--
+        <paper-card image="[[item.pic1]]" class$="[[_computeTileClass(item.color)]]">
+      <div class="card-content">[[item.value]]</div>
+    </paper-card> -->
+
+
+
+        <!--
+        <paper-material elevation="1" id="topBar" class="topInfo">
+          <div class="topInfoText">[[item.value]]</div>
+          <div class="topInfoText2">[[item.subTitle]]</div>
+        </paper-material>
+
+        <iron-image id="mainPhoto" class="grey" style="width:100%; height:100%; background-color: lightgray;" sizing="cover" preload fade src="[[item.pic1]]"></iron-image> -->
+
 
 
 

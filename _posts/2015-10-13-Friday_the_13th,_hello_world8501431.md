@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Post 1"
-subTitle: "Sub title post 1"
+title: "Post 3"
+subTitle: "Sub title 3"
 published: true
 pic1: /INCD-Journal/images/projects/aurora/aurora.png
 color: "blue"
